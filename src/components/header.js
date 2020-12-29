@@ -8,6 +8,7 @@ const Container = styled.div`
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   text-align: center;
+  align-items: baseline;
 
   a{
     color: black;
@@ -15,7 +16,7 @@ const Container = styled.div`
   }
 
  a:nth-child(3){
-   font-size: 1.1rem;
+   font-size: 1.25rem;
  }
 
   a:hover{
