@@ -1,42 +1,50 @@
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
+import styled from "styled-components"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
+const Container = styled.div`
+  width: 100vw;
+  padding: 1.45rem 1.0875rem;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  text-align: center;
+
+  a{
+    color: black;
+    text-decoration: none;
+  }
+
+ a:nth-child(3){
+   font-size: 1.1rem;
+ }
+
+  a:hover{
+    border-bottom: 1px solid red;
+  }
+`
+
+const Header = () => (
+  <Container>
+    <Link to="/">
+      <h4>HOME</h4>
+    </Link>
+
+    <Link to="/about">
+      <h4>ABOUT</h4>
+    </Link>
+
+    <Link to="/praktics">
+      <h4>PRA<span style={{color: `red`}}>K</span>TICES</h4>
+    </Link>
+
+    <Link to="/contact">
+      <h4>CONTACT</h4>
+    </Link>
+
+    <Link to="/members">
+      <h4>MEMBERS</h4>
+    </Link>
+  </Container>
 )
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
 
 export default Header
