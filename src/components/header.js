@@ -11,12 +11,13 @@ const Container = styled.div`
   align-items: baseline;
 
   a{
-    color: black;
+    font-size: 2rem;
+    color: var(--main-color);
     text-decoration: none;
   }
 
  a:nth-child(3){
-   font-size: 1.25rem;
+   font-size: 2.2rem;
  }
 
   a:hover{
@@ -35,7 +36,7 @@ const Header = () => (
     </Link>
 
     <Link to="/praktics">
-      <h4>PRA<span style={{color: `red`}}>K</span>TICES</h4>
+      <h4>PRA<span style={{color: `var(--secondary-color)`}}>K</span>TICES</h4>
     </Link>
 
     <Link to="/contact">

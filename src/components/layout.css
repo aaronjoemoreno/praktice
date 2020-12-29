@@ -1,0 +1,19 @@
+:root{
+    font-size: 10px;
+    --main-color: black;
+    --secondary-color: red;
+    --white-color: #fff;
+    --grey-color: rgb(169, 169, 169);
+}
+
+h1{
+    font-size: 3rem;
+}
+
+h2{
+    font-size: 2.5rem;
+}
+
+h3{
+    font-size: 2rem;
+}
