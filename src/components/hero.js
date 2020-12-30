@@ -38,12 +38,33 @@ const Container = styled.div`
 `
 
 const Hero = () => {
+
     const data = useStaticQuery(graphql`
     query SiteTitleQuery {
-      images: allImageSharp {
-        nodes {
-          fluid(maxWidth: 2000, quality: 100) {
-            ...GatsbyImageSharpFluid
+      logo: allImageSharp(filter: {fluid: {originalName: {eq: "praktice.jpg"}}}) {
+        edges {
+          node {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+      header: allImageSharp(filter: {fluid: {originalName: {eq: "header-1.jpg"}}}) {
+        edges {
+          node {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+      headerTwo: allImageSharp(filter: {fluid: {originalName: {eq: "header-2.jpg"}}}) {
+        edges {
+          node {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
           }
         }
       }
@@ -62,13 +83,13 @@ const Hero = () => {
 
     return (
         <Container>
-            <Img fluid={data.images.nodes[0].fluid} className="main-logo" alt="praktice logo"/>
+            <Img fluid={data.logo.edges[0].node.fluid} className="main-logo" alt="praktice logo"/>
             <h2>{data.site.siteMetadata.description}</h2>
             <Button text="Contact Us!" clickedButton={contact}/>
 
             <div className="image-container">
-              <Img fluid={data.images.nodes[2].fluid} className="header-img-profile" alt="female trainer"/>
-              <Img fluid={data.images.nodes[1].fluid} className="header-img-profile" alt="male trainer"/>
+              <Img fluid={data.header.edges[0].node.fluid} className="header-img-profile" alt="female trainer"/>
+              <Img fluid={data.headerTwo.edges[0].node.fluid} className="header-img-profile" alt="male trainer"/>
             </div>
         </Container>
     )
