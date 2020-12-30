@@ -81,7 +81,7 @@ const About = () => {
             <p>Rent by the hour <br />
             Help their customers deal with their Self Image which is the hardest obstacle for new ppl try to work out when they go to a shared space. </p>
 
-            <div className="about-vision">
+            <div className="about-vision" style={{borderTop: '1px solid black'}}>
                 <h2 style={{textAlign: 'left'}}>Our Values:</h2>
                 <div className="integrity">
                     <p style={{textAlign: 'left'}}>KINDNESS in our COMMUNICATION towards our fellow practitioners and customers which will create a steadfast PROFESSIONAL path of mutual GROWTH, increasing KNOWLEDGE and ETHICS</p>

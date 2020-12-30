@@ -6,6 +6,8 @@ const AboutContainer = styled.div`
     width: 80%;
     height: 1000px;
     margin: 0 auto;
+    padding-top: 15rem;
+    text-align: center;
 
     .tabs{
         width: 100%;
@@ -66,6 +68,7 @@ const Contact = () => {
 
 return (
         <AboutContainer>
+            <h1>Contact</h1>
             <div className="tabs">
                 <button className="email tab" value="email" onClick={contactTab}>Email</button>
                 <button className="schedule tab" value="schedule" onClick={contactTab}>Schedule</button>
