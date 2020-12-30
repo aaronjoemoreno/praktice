@@ -4,11 +4,11 @@ import styled from "styled-components"
 
 const Container = styled.div`
   width: 100vw;
-  padding: 1.45rem 1.0875rem;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   text-align: center;
   align-items: baseline;
+  padding-bottom: 2rem;
 
   a{
     font-size: 2rem;

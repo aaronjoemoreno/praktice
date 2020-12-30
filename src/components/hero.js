@@ -7,7 +7,7 @@ import Img from 'gatsby-image';
 
 const Container = styled.div`
     text-align: center;
-    height: 80vh;
+    padding-bottom: 5rem;
 
     .main-logo{
         width: 60%;
@@ -15,11 +15,11 @@ const Container = styled.div`
     }
 
     h2{
-        font-size: 2.5rem;
+        font-size: 2.2rem;
         text-align: center;
         color: var(--grey-color);
-        padding-bottom: 2rem;
-        width: 50%;
+        padding-bottom: 2.5rem;
+        width: 60%;
         margin: 0 auto;
     }
 
@@ -27,9 +27,9 @@ const Container = styled.div`
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-gap: 2rem;
-      width: 80%;
+      width: 70%;
       margin: 0 auto;
-      padding-top: 10rem;
+      padding-top: 5rem;
     }
 
     .header-img-profile:hover{
@@ -55,8 +55,6 @@ const Hero = () => {
     }
   `)
 
-  console.log(data);
-
   const contact = (e) =>{
     //TODO - go to contact section
     alert('go to contact section')
@@ -69,10 +67,9 @@ const Hero = () => {
             <Button text="Contact Us!" clickedButton={contact}/>
 
             <div className="image-container">
-              <Img fluid={data.images.nodes[2].fluid} className="header-img-profile" alt="female trainer"/>
-              <Img fluid={data.images.nodes[1].fluid} className="header-img-profile" alt="male trainer"/>
+              <Img fluid={data.images.nodes[3].fluid} className="header-img-profile" alt="female trainer"/>
+              <Img fluid={data.images.nodes[4].fluid} className="header-img-profile" alt="male trainer"/>
             </div>
-
         </Container>
     )
 }
