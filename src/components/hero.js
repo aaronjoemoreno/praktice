@@ -67,8 +67,8 @@ const Hero = () => {
             <Button text="Contact Us!" clickedButton={contact}/>
 
             <div className="image-container">
-              <Img fluid={data.images.nodes[3].fluid} className="header-img-profile" alt="female trainer"/>
-              <Img fluid={data.images.nodes[4].fluid} className="header-img-profile" alt="male trainer"/>
+              <Img fluid={data.images.nodes[2].fluid} className="header-img-profile" alt="female trainer"/>
+              <Img fluid={data.images.nodes[1].fluid} className="header-img-profile" alt="male trainer"/>
             </div>
         </Container>
     )
