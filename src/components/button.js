@@ -3,8 +3,8 @@ import styled from 'styled-components'
 
 const MainButton = styled.div`
     margin: 0 auto;
-    font-size: 2rem;
-    width: 20rem;
+    font-size: 1.7rem;
+    width: 15rem;
     height: 5rem;
     line-height: 5rem;
     border-radius: 2.5rem;

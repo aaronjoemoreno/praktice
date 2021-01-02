@@ -10,12 +10,12 @@ const Container = styled.div`
     padding-bottom: 5rem;
 
     .main-logo{
-        width: 60%;
+        width: 40%;
         margin: 0 auto;
     }
 
     h2{
-        font-size: 2.2rem;
+        font-size: 2rem;
         text-align: center;
         color: var(--grey-color);
         padding-bottom: 2.5rem;
@@ -27,7 +27,7 @@ const Container = styled.div`
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-gap: 2rem;
-      width: 70%;
+      width: 60%;
       margin: 0 auto;
       padding-top: 5rem;
     }

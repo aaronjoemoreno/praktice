@@ -9,19 +9,23 @@ const Container = styled.div`
   text-align: center;
   align-items: baseline;
   padding-bottom: 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: var(--white-color);
 
   a{
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: var(--main-color);
     text-decoration: none;
   }
 
  a:nth-child(3){
-   font-size: 2.2rem;
+   font-size: 1.8rem;
  }
 
   a:hover{
-    border-bottom: 1px solid red;
+    text-decoration: underline var(--secondary-color);
   }
 `
 
