@@ -85,7 +85,9 @@ const Hero = () => {
         <Container>
             <Img fluid={data.logo.edges[0].node.fluid} className="main-logo" alt="praktice logo"/>
             <h2>{data.site.siteMetadata.description}</h2>
-            <Button text="Contact Us!" clickedButton={contact}/>
+            <a href="#contact" style={{textDecoration: 'none'}}>
+              <Button text="Contact Us!"/>
+            </a>
 
             <div className="image-container">
               <Img fluid={data.header.edges[0].node.fluid} className="header-img-profile" alt="female trainer"/>

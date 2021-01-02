@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import JotformEmbed from 'react-jotform-embed';
 
 const Scheduler = () => {

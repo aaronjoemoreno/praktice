@@ -23,5 +23,5 @@ h3{
 }
 
 iframe{
-    height: 600px !important;
+    min-height: 800px !important;
 }

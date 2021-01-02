@@ -18,7 +18,19 @@ const AboutContainer = styled.div`
 
     .tab{
         font-size: 2rem;
-        border: 1px solid var(--main-color);
+        background: var(--main-white);
+        border: .2px solid var(--main-color);
+    }
+
+    .tab:hover{
+        background: var(--secondary-color);
+        color: white;
+        cursor: pointer;
+    }
+
+    .selected{
+        background: var(--secondary-color);
+        color: white;
     }
 `
 
@@ -35,6 +47,7 @@ const Email = styled.div`
         min-height: 2rem;
         font-size: 2rem;
         margin: 1rem;
+        border: .5px solid var(--main-color);
     }
 
     button{
@@ -64,10 +77,8 @@ const Contact = () => {
         setTab(e.currentTarget.value)
     }
 
-    console.log(tab);
-
 return (
-        <AboutContainer>
+        <AboutContainer id="contact">
             <h1>Contact</h1>
             <div className="tabs">
                 <button className="email tab" value="email" onClick={contactTab}>Email</button>
@@ -77,12 +88,14 @@ return (
 
             {tab === 'email' &&
                 <Email>
-                <form name="contact" method="POST" data-netlify="true">
-                    <input type="text" name="name" placeholder="name"/>
-                    <input type="email" name="email" placeholder="email"/>
-                    <textarea name="message" placeholder="message"></textarea>
-                    <button type="submit">Send</button>
-                </form>
+                    <form method="post" netlify-honeypot="bot-field" data-netlify="true" name="contact">
+                        <input type="hidden" name="bot-field" />
+                        <input type="hidden" name="form-name" value="contact" />
+                        <input type="text" name="name" placeholder="name"/>
+                        <input type="email" name="email" placeholder="email"/>
+                        <textarea name="message" placeholder="message"></textarea>
+                        <button type="submit">Send</button>
+                    </form>
                 </Email>
             }
 
@@ -91,7 +104,7 @@ return (
             }
 
             {tab === 'call' &&
-                <h2>Call</h2>
+                <h2>Tel: <a href="tel:347-599-2832" style={{textDecoration: 'none'}}>347-599-2832</a></h2>
             }
         </AboutContainer>
     )

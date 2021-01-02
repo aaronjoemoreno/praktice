@@ -71,7 +71,7 @@ const About = () => {
     return (
         <Container>
             <h1>ABOUT</h1>
-            <p>PRAKTICE  is a private wellness studio designed to empower trainers and practitioners. Our unique and versatile space allows professionals to work privately and independently with their clients to establish themselves as authorities in their fields.</p>
+            <p>PRAKTICE is a private wellness studio designed to empower trainers and practitioners. Our unique and versatile space allows professionals to work privately and independently with their clients to establish themselves as authorities in their fields.</p>
             <p>PRAKTICE strives to be an incubator that puts the needs of the practitioner first.  While practitioners are the key players affecting lives in the health and fitness industry, their concerns are often not considered by the institutions through which they work.</p>
 
             <Img fluid={data.about.edges[0].node.fluid} className="main-logo" alt="praktice logo" style={{width: `50%`, margin: `0 auto`}}/>
