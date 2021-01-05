@@ -117,7 +117,7 @@ const Header = () => {
         ABOUT
       </Link>
 
-      <Link to="/praktics">
+      <Link to="/praktices">
         <h4>PRA<span style={{color: `var(--secondary-color)`}}>K</span>TICES</h4>
       </Link>
 
