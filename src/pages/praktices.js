@@ -26,7 +26,7 @@ const Praktices = ({data}) => {
 
     const praktices = data.praktices.nodes;
 
-    console.log(praktices);
+    // console.log(praktices);
 
     return (
         <Container>
