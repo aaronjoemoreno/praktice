@@ -4,6 +4,10 @@ import styled from "styled-components"
 import './mobile-nav.css'
 
 const Container = styled.div`
+  position: sticky;
+  top: 0;
+  z-index: 999;
+
   nav{
     width: 100vw;
     display: grid;
@@ -11,14 +15,12 @@ const Container = styled.div`
     text-align: center;
     align-items: baseline;
     padding-bottom: 2rem;
-    position: sticky;
-    top: 0;
-    z-index: 999;
     background: var(--white-color);
   }
 
   .mobile-nav{
     display: none;
+    position: sticky;
   }
 
   a{
@@ -37,6 +39,8 @@ const Container = styled.div`
 
 
   @media (max-width: 768px) {
+    position: relative;
+
     nav{
       display: none;
     }
@@ -44,7 +48,7 @@ const Container = styled.div`
     .mobile-nav{
       display: block;
       position: relative;
-      height: 5rem;
+      height: 4rem;
     }
 
     .hamburger{
