@@ -32,9 +32,20 @@ const Container = styled.div`
       padding-top: 5rem;
     }
 
-    .header-img-profile:hover{
+    @media (max-width: 768px) {
+      .header-img-profile{
 
+      }
+
+      .image-container{
+        width: 80%;
+      }
+
+      .main-logo{
+        width: 70%;
+      }
     }
+
 `
 
 const Hero = () => {
