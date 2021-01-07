@@ -10,7 +10,7 @@ const NotFoundPage = () => (
     <SEO title="404: Not found" />
     <Logo />
     <div style={{width: '100%', textAlign: 'center'}}>
-      <h1 style={{margin: '0 auto'}}>Hold Tight! This page is coming soon...Promise</h1>
+      <h1 style={{margin: '0 auto'}}>Hold Tight! This page is coming soon...Promise!</h1>
       <h2>Until Then, explore out <Link to="/praktices">Pra<span style={{color: 'red'}}>k</span>tices</Link></h2>
     </div>
   </Layout>
