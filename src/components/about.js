@@ -9,29 +9,30 @@ const Container = styled.div`
     margin: 0 auto;
     border-top: 1px solid black;
     text-align: center;
+    padding-bottom: 5rem;
 
     p{
-      font-size: 2rem;
+        font-size: 2rem;
     }
 
     .integrity h3{
-      margin-top: 2rem;
+        margin-top: 2rem;
     }
 
     .integrity, .mission{
-      display: grid;
-      width: 100%;
-      max-width: 1000px;
-      grid-template-columns: repeat(2, 1fr);
-      grid-gap: 5rem;
-      padding-bottom: 2rem;
+        display: grid;
+        width: 100%;
+        max-width: 1000px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 5rem;
+        padding-bottom: 2rem;
     }
     h3{
-      text-decoration: underline;
+        text-decoration: underline;
     }
 
     .about-vision{
-      margin: 0 auto;
+        margin: 0 auto;
     }
 `
 
@@ -71,10 +72,15 @@ const About = () => {
     return (
         <Container>
             <h1>ABOUT</h1>
-            <p>PRAKTICE  is a private wellness studio designed to empower trainers and practitioners. Our unique and versatile space allows professionals to work privately and independently with their clients to establish themselves as authorities in their fields.</p>
+            <p>PRAKTICE is a private wellness studio designed to empower trainers and practitioners. Our unique and versatile space allows professionals to work privately and independently with their clients to establish themselves as authorities in their fields.</p>
             <p>PRAKTICE strives to be an incubator that puts the needs of the practitioner first.  While practitioners are the key players affecting lives in the health and fitness industry, their concerns are often not considered by the institutions through which they work.</p>
 
             <Img fluid={data.about.edges[0].node.fluid} className="main-logo" alt="praktice logo" style={{width: `50%`, margin: `0 auto`}}/>
+
+            <p>This is why from today onward each certified and insured practitioner can use PRAKTICE to flourish, influence and break boundaries with their customers, on their own, or with colleagues. </p>
+
+            <p>Rent by the hour <br />
+            Help their customers deal with their Self Image which is the hardest obstacle for new ppl try to work out when they go to a shared space. </p>
 
             <div className="about-vision" style={{borderTop: '1px solid black'}}>
                 <h2 style={{textAlign: 'left'}}>Our Values:</h2>

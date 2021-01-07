@@ -1,6 +1,7 @@
 import React from 'react'
 import Button from './button'
 import styled from "styled-components"
+import { Link } from 'gatsby'
 import { useStaticQuery, graphql } from "gatsby"
 import Img from 'gatsby-image';
 
@@ -86,19 +87,13 @@ const Hero = () => {
       }
     }
   `)
-
-  const contact = (e) =>{
-    //TODO - go to contact section
-    alert('go to contact section')
-  }
-
     return (
         <Container>
             <Img fluid={data.logo.edges[0].node.fluid} className="main-logo" alt="praktice logo"/>
             <h2>{data.site.siteMetadata.description}</h2>
-            <a href="#contact" style={{textDecoration: 'none'}}>
+            <Link to="/contact" style={{textDecoration: 'none'}}>
               <Button text="Contact Us!"/>
-            </a>
+            </Link>
 
             <div className="image-container">
               <Img fluid={data.header.edges[0].node.fluid} className="header-img-profile" alt="female trainer"/>

@@ -2,11 +2,10 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import Scheduler from './scheduler'
 
-const AboutContainer = styled.div`
+const Container = styled.div`
     width: 80%;
     height: 1000px;
     margin: 0 auto;
-    padding-top: 15rem;
     text-align: center;
 
     .tabs{
@@ -69,7 +68,7 @@ const Email = styled.div`
     }
 `
 
-const Contact = () => {
+export const Contact = () => {
     const [tab, setTab] = useState('email');
 
     const contactTab = (e) =>{
@@ -78,7 +77,7 @@ const Contact = () => {
     }
 
 return (
-        <AboutContainer id="contact">
+        <Container id="contact">
             <h1>Contact</h1>
             <div className="tabs">
                 <button className="email tab" value="email" onClick={contactTab}>Email</button>
@@ -106,7 +105,6 @@ return (
             {tab === 'call' &&
                 <h2>Tel: <a href="tel:347-599-2832" style={{textDecoration: 'none'}}>347-599-2832</a></h2>
             }
-        </AboutContainer>
+        </Container>
     )
 }
-export default Contact;

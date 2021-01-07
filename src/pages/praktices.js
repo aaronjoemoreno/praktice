@@ -3,6 +3,8 @@ import Header from '../components/header'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
+import Masonry from 'react-masonry-css'
+import './praktices.css'
 
 const Container = styled.div`
     text-align: center;
@@ -20,10 +22,18 @@ const Container = styled.div`
         padding: 2rem;
     }
 
+    .praktice img{
+        border-radius: 2rem;
+    }
 `
 
 const Praktices = ({data}) => {
-
+    const breakpointColumnsObj = {
+        default: 4,
+        1100: 3,
+        700: 2,
+        500: 1
+      };
     const praktices = data.praktices.nodes;
 
     // console.log(praktices);
@@ -36,16 +46,25 @@ const Praktices = ({data}) => {
                 <h3>PRAKTICE is designated to serve practitioners for Solo session or with one or two Customers Virtual Instruction: Live or, prerecorded - Photoshoots - Consultations</h3>
             </div>
 
-            <div className="praktices">
+            <Masonry
+                breakpointCols={breakpointColumnsObj}
+                className="my-masonry-grid"
+                columnClassName="my-masonry-grid_column"
+                // style={{background: 'black'}}
+                >
                 {praktices.map(praktice => {
                     return(
-                        <div className="praktice" key={praktice.title}>
-                            <Img fluid={praktice.image.asset.fluid}/>
-                            <h1>{praktice.title}</h1>
+                        <>
+                        <div className="praktice" key={praktice.title} style={{position: 'relative'}}>
+                            <Link to="/contact">
+                                <Img fluid={praktice.image.asset.fluid} style={{height: Math.random() * (500 - 200) + 200}} />
+                                <h3 style={{position: 'absolute', top: 0, left: '5px', background: 'red', color: 'white'}}>{praktice.title}</h3>
+                            </Link>
                         </div>
+                        </>
                     )
                 })}
-            </div>
+            </Masonry>
         </Container>
     )
 }
