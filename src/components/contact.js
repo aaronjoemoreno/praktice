@@ -31,6 +31,10 @@ const Container = styled.div`
         background: var(--secondary-color);
         color: var(--white-color);
     }
+
+    @media (max-width: 768px) {
+        width: 90%;
+    }
 `
 
 const Email = styled.div`
@@ -69,6 +73,10 @@ const Email = styled.div`
             cursor: pointer;
             opacity: .7;
         }
+
+        @media (max-width: 768px) {
+            width: 100%;
+        }
     }
 `
 
@@ -82,6 +90,10 @@ const Call = styled.div`
     text-align: center;
     justify-content: center;
     height: 170px;
+
+    @media (max-width: 768px) {
+        width: 100%;
+    }
 `
 
 export const Contact = () => {
