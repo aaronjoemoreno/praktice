@@ -16,6 +16,10 @@ const Container = styled.div`
         margin: 0 auto;
     }
 
+    .my-masonry-grid{
+        background: black;
+    }
+
     .praktices{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
