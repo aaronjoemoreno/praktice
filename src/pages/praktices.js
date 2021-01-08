@@ -28,7 +28,7 @@ const Container = styled.div`
     }
 
     .praktice img{
-        border-radius: .5rem;
+        /* border-radius: .5rem; */
     }
 `
 

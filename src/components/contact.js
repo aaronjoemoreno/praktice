@@ -75,7 +75,10 @@ const Email = styled.div`
         }
 
         @media (max-width: 768px) {
-            width: 100%;
+            font-size: 2rem;
+            width: 10rem;
+            height: 5rem;
+            line-height: 4rem;
         }
     }
 `
@@ -93,6 +96,10 @@ const Call = styled.div`
 
     @media (max-width: 768px) {
         width: 100%;
+
+        button{
+            background: purple;
+        }
     }
 `
 
