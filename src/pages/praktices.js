@@ -43,8 +43,8 @@ const Praktices = ({data}) => {
         <Container>
             <Header />
             <Logo />
-            <div className="details">
-                <h2>If you do not see your Praktice <Link to="/contact">Contact Us!</Link></h2>
+            <div className="details" style={{maxWidth: "60%", paddingBottom: '5rem'}}>
+                <h3>If you do not see your Praktice <Link to="/contact">Contact Us!</Link></h3>
                 <h3>PRAKTICE is designated to serve practitioners for Solo session or with one or two Customers Virtual Instruction: Live or, prerecorded - Photoshoots - Consultations</h3>
             </div>
 

@@ -1,5 +1,6 @@
 import React from 'react'
 import Button from './button'
+import Logo from './logo'
 import styled from "styled-components"
 import { Link } from 'gatsby'
 import { useStaticQuery, graphql } from "gatsby"
@@ -39,7 +40,8 @@ const Container = styled.div`
       }
 
       .image-container{
-        width: 80%;
+        grid-template-columns: 1fr;
+        width: 70%;
       }
 
       .main-logo{
@@ -53,15 +55,6 @@ const Hero = () => {
 
     const data = useStaticQuery(graphql`
     query SiteTitleQuery {
-      logo: allImageSharp(filter: {fluid: {originalName: {eq: "praktice.jpg"}}}) {
-        edges {
-          node {
-            fluid {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-      }
       header: allImageSharp(filter: {fluid: {originalName: {eq: "header-1.jpg"}}}) {
         edges {
           node {
@@ -89,7 +82,7 @@ const Hero = () => {
   `)
     return (
         <Container>
-            <Img fluid={data.logo.edges[0].node.fluid} className="main-logo" alt="praktice logo"/>
+            <Logo />
             <h2>{data.site.siteMetadata.description}</h2>
             <Link to="/contact" style={{textDecoration: 'none'}}>
               <Button text="Contact Us!"/>

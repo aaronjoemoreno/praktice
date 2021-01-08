@@ -1,5 +1,5 @@
 import React from 'react'
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import Img from 'gatsby-image'
 
 
@@ -21,7 +21,9 @@ const Logo = () => {
 
     return(
         <>
-            <Img fluid={data.logo.edges[0].node.fluid} alt="praktice logo" style={{width: '60%', margin: '0 auto'}}/>
+            <Link to="/">
+                <Img fluid={data.logo.edges[0].node.fluid} alt="praktice logo" style={{width: '40%', margin: '0 auto'}}/>
+            </Link>
         </>
     )
 }

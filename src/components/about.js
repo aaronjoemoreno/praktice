@@ -31,8 +31,23 @@ const Container = styled.div`
         text-decoration: underline;
     }
 
+    .main-logo{
+      width: 50%;
+    }
+
     .about-vision{
         margin: 0 auto;
+    }
+
+    .active{
+      background: var(--secondary-color);
+      color: var(--white-color);
+    }
+
+    @media (max-width: 768px) {
+      .main-logo{
+        width: 100%;
+      }
     }
 `
 
@@ -75,7 +90,7 @@ const About = () => {
             <p>PRAKTICE is a private wellness studio designed to empower trainers and practitioners. Our unique and versatile space allows professionals to work privately and independently with their clients to establish themselves as authorities in their fields.</p>
             <p>PRAKTICE strives to be an incubator that puts the needs of the practitioner first.  While practitioners are the key players affecting lives in the health and fitness industry, their concerns are often not considered by the institutions through which they work.</p>
 
-            <Img fluid={data.about.edges[0].node.fluid} className="main-logo" alt="praktice logo" style={{width: `50%`, margin: `0 auto`}}/>
+            <Img fluid={data.about.edges[0].node.fluid} className="main-logo" alt="praktice logo" style={{margin: `0 auto`}}/>
 
             <p>This is why from today onward each certified and insured practitioner can use PRAKTICE to flourish, influence and break boundaries with their customers, on their own, or with colleagues. </p>
 

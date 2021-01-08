@@ -98,7 +98,7 @@ const Header = () => {
         <h4>CONTACT</h4>
       </Link>
 
-      <Link to="/members">
+      <Link to="/">
         <h4>MEMBERS</h4>
       </Link>
     </nav>
@@ -129,7 +129,7 @@ const Header = () => {
         <h4>CONTACT</h4>
       </Link>
 
-      <Link to="/members">
+      <Link to="/">
         <h4>MEMBERS</h4>
       </Link>
     </div>

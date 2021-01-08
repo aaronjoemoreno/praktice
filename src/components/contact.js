@@ -4,7 +4,7 @@ import Scheduler from './scheduler'
 
 const Container = styled.div`
     width: 80%;
-    height: 1000px;
+    height: auto;
     margin: 0 auto;
     text-align: center;
 
@@ -27,18 +27,22 @@ const Container = styled.div`
         cursor: pointer;
     }
 
-    .selected{
+    .active{
         background: var(--secondary-color);
-        color: white;
+        color: var(--white-color);
     }
 `
 
 const Email = styled.div`
-    width: 100%;
+    width: 80%;
+    margin: 0 auto;
     padding-top: 5rem;
+    margin-top: 7rem;
+    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
     grid-template-columns: 1fr;
     text-align: center;
     justify-content: center;
+    height: 400px;
 
     input, textarea{
         width: 50%;
@@ -68,6 +72,18 @@ const Email = styled.div`
     }
 `
 
+const Call = styled.div`
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 5rem;
+    margin-top: 7rem;
+    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+    grid-template-columns: 1fr;
+    text-align: center;
+    justify-content: center;
+    height: 170px;
+`
+
 export const Contact = () => {
     const [tab, setTab] = useState('email');
 
@@ -80,13 +96,14 @@ return (
         <Container id="contact">
             <h1>Contact</h1>
             <div className="tabs">
-                <button className="email tab" value="email" onClick={contactTab}>Email</button>
-                <button className="schedule tab" value="schedule" onClick={contactTab}>Schedule</button>
-                <button className="call tab" value="call" onClick={contactTab}>Call</button>
+                <button className={`email tab ${tab == "email" ? "active" : ""}`} value="email" onClick={contactTab}>Email</button>
+                <button className={`schedule tab ${tab == "schedule" ? "active" : ""}`} value="schedule" onClick={contactTab}>Schedule</button>
+                <button className={`call tab ${tab == "call" ? "active" : ""}`} value="call" onClick={contactTab}>Call</button>
             </div>
 
             {tab === 'email' &&
                 <Email>
+                    <h2>Send Us a Message:</h2>
                     <form method="post" netlify-honeypot="bot-field" data-netlify="true" name="contact">
                         <input type="hidden" name="bot-field" />
                         <input type="hidden" name="form-name" value="contact" />
@@ -103,7 +120,10 @@ return (
             }
 
             {tab === 'call' &&
-                <h2>Tel: <a href="tel:347-599-2832" style={{textDecoration: 'none'}}>347-599-2832</a></h2>
+                <Call>
+                    <h2>Give Us a Call:</h2>
+                    <h2>Tel: <a href="tel:347-599-2832">347-599-2832</a></h2>
+                </Call>
             }
         </Container>
     )

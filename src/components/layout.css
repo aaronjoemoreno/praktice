@@ -23,5 +23,10 @@ h3{
 }
 
 iframe{
-    min-height: 800px !important;
+    min-height: 680px !important;
+}
+
+a{
+    text-decoration: none;
+    color: var(--secondary-color)
 }
