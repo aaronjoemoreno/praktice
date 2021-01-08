@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from '../components/header'
-import Log from '../components/logo'
+import Logo from '../components/logo'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
