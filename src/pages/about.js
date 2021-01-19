@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Header from '../components/header'
 import Logo from '../components/logo'
+import { default as AboutComponent } from '../components/about'
 
 const Container = styled.div`
     height: 100vh;
@@ -14,7 +15,7 @@ const About = () => {
         <Container>
             <Header />
             <Logo />
-           <h1>ABOUT Us Coming Soon...</h1>
+            <AboutComponent/>
         </Container>
     )
 }
