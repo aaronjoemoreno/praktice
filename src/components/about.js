@@ -1,5 +1,5 @@
 import React from 'react'
-import Faq from '../components/Faq'
+import Faq from './Faq'
 import { useStaticQuery, graphql } from "gatsby"
 import Img from 'gatsby-image'
 import styled from 'styled-components'

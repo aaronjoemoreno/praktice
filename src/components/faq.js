@@ -12,7 +12,6 @@ const Container = styled.div`
 
 `
 
-
 const Faq = () => {
     return (
         <Container>
