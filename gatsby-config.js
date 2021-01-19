@@ -27,6 +27,18 @@ module.exports = {
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
+      resolve: "gatsby-plugin-firebase",
+      options: {
+        credentials: {
+          apiKey: process.env.GATSBY_FIREBASE_API_KEY,
+          authDomain: process.env.GATSBY_FIREBASE_AUTH_DOMAIN,
+          databaseURL: process.env.GATSBY_FIREBASE_PROJECT_ID,
+          projectId: process.env.GATSBY_FIREBASE_STORAGE_BUCKET,
+          storageBucket: process.env.GATSBY_FIREBASE_MESSAGING_SENDER_ID,
+          messagingSenderId: process.env.GATSBY_FIREBASE_APP_ID,
+          appId: process.env.GATSBY_FIREBASE_MEASUREMENT_ID,
+        }
+      },
       resolve: `gatsby-source-sanity`,
       options: {
         projectId: 'svgfoloy',

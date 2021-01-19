@@ -3,7 +3,8 @@ import styled from 'styled-components'
 import Header from '../components/header'
 import Logo from '../components/logo'
 import Scheduler from '../components/scheduler'
-import Firebase from '../components/Firebase/firebase'
+// import Firebase from '../components/Firebase/firebase'
+import firebase from "gatsby-plugin-firebase"
 import FirebaseState from '../components/Firebase/FirebaseState'
 import { navigate } from 'gatsby'
 // import FirebaseContext from '../components/Firebase/context';
@@ -155,7 +156,7 @@ const Members = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        Firebase.auth().signInWithEmailAndPassword(email, password)
+        firebase.auth().signInWithEmailAndPassword(email, password)
         .then(res => {
             console.log(res);
             navigate("/members/dashboard")
@@ -198,7 +199,7 @@ const Members = () => {
                             <form onSubmit={handleSubmit}>
                                 <input type="email" placeholder="email" onChange={(e) => setEmail(e.target.value)}/>
                                 <input type="password" placeholder="password" onChange={(e) => setpassword(e.target.value)}/>
-                                <button type="submit">Send</button>
+                                <button type="submit" onClick={handleSubmit} >Send</button>
                                 <h4 style={{color: 'var(--secondary-color)'}}>Forgot your password?</h4>
                             </form>
                             <p>don't have an account? <span onClick={() => setNewMember(true)}>sign up</span></p>
