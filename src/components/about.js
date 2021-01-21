@@ -40,7 +40,7 @@ const Container = styled.div`
     }
 
     .main-logo{
-      width: 50%;
+      width: 80%;
     }
 
     .about-vision{
@@ -50,6 +50,10 @@ const Container = styled.div`
     .active{
       background: var(--secondary-color);
       color: var(--white-color);
+    }
+
+    .pilates{
+      border-radius: 2.5rem;
     }
 
     @media (max-width: 768px) {
@@ -147,6 +151,15 @@ const About = () => {
               }
             }
           }
+          pilates: allImageSharp(filter: {fluid: {originalName: {eq: "pilates.jpg"}}}) {
+            edges {
+              node {
+                fluid {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
         }
 
   `)
@@ -154,29 +167,49 @@ const About = () => {
     return (
         <Container>
             <h1>ABOUT</h1>
-            <p>PRAKTICE is a private wellness studio designed to empower trainers and practitioners. Our unique and versatile space allows professionals to work privately and independently with their clients to establish themselves as authorities in their fields.</p>
-            <p>Our 150 square foot studio is paved with interlocking rubber tiles and comes equipped with stall wall bars, polymetric stacks, stability balls, TRX, medicine balls, a dumbbell rack, a stretching table, and more accessories that will afford you the flexibility to train your clients in different modalities. </p>
-
-            <Img fluid={data.about.edges[0].node.fluid} className="main-logo" alt="praktice logo" style={{margin: `0 auto`}}/>
-
-            <q>Practice makes perfect. 
-            After a long time of practicing, our work will become natural, skillful, swift, and steady.
-            </q>
-            <p>Bruce Lee</p>
-
-            <p>PRAKTICE strives to be an incubator that puts the needs of the practitioner first.  While practitioners are the key players affecting lives in the health and fitness industry, their concerns are often not considered by the institutions through which they work.</p>
-
-            <p>Praktice And Covid 19<br />
-            One of the reasons you train your clients at PRAKTICE is for the privacy and seclusion that cannot be found at most fitness centers.  We are committed to keep an exclusive and germ free zone to insure the safety of our practitioners and their clients.  The PRAKTICE studio is equipped with a Molekule Pro air purifier.  We allow ten minute intervals between sessions for cleaning, ventilation and sanitization.  In addition, each practitioner is required to wipe down all equipment before and after use and wearing masks during training sessions is required.
+            <p>PRAKTICE is a private wellness studio designed to empower practitioners. Our unique and versatile space allows practitioners to work privately and independently, or with their clients to establish themselves as authorities in their fields.</p>
+            <p>Our studio is a 150 square foot space paved with interlocking rubber tiles and comes equipped with stall wall bars, polymetric stacks, stability balls, TRX, medicine balls, a dumbbell rack, a stretching table, and more accessories that will afford you the flexibility to train your clients in different modalities.
             </p>
 
-            <Img fluid={data.why.edges[0].node.fluid} className="main-logo" alt="why" style={{width: `100%`}}/>
+            <Img fluid={data.pilates.edges[0].node.fluid} className="main-logo" alt="pilates" style={{margin: `0 auto`, borderRadius: `2.5rem`, marginTop: `4rem`, marginBottom: `4rem`}}/>
 
-            <p>Why PRAKTICE?<br />
-            PRAKTICE  is a private space which allows you to stay focused on your goals, eliminating the all so common distractions we experience when we work in large scale wellness spaces such as gyms and cross fit spaces.
-            </p>
+            <p>We strive to be an incubator that puts the needs of the practitioner first. While practitioners are the key players affecting the lives, health and fitness industry, their concerns are often not considered by the institutions through which they work.</p>
 
-            <div className="about-vision" style={{borderTop: '1px solid black'}}>
+            <div style={{borderTop: `2px solid var(--main-color)`, borderBottom: `2px solid var(--main-color)`, padding: `4rem 4rem`}}>
+              <q>Practice makes perfect. 
+              After a long time of practicing, our work will become natural, skillful, swift, and steady.
+              </q>
+              <p>Bruce Lee</p>
+
+              <Img fluid={data.about.edges[0].node.fluid} className="main-logo" alt="praktice logo" style={{margin: `0 auto`}}/>
+            </div>
+
+            <div style={{borderBottom: `2px solid var(--main-color)`, padding: `4rem 4rem`}}>
+              <h2>COVID 19 - KEEPING SAFE </h2>
+
+              <p>PRAKTICE offers the privacy and seclusion that cannot be found at most wellness centers. We are committed to keep an exclusive and germ free zone to maximize the safety of our practitioners and their clients. PRAKTICE is equipped with a Molekule Pro air purifier.  We allow ten minute intervals between sessions for cleaning, further ventilation and sanitization.  In addition, each practitioner is required to wipe down all equipment before and after use and wearing masks during sessions.
+              </p>
+            </div>
+
+            <div style={{borderBottom: `2px solid var(--main-color)`, padding: `4rem 4rem`}}>
+              <div style={{position: `relative`}}>
+                <Img fluid={data.why.edges[0].node.fluid} className="main-logo" alt="mission" style={{width: `100%`, borderRadius: `2.5rem`, height: `300px`}}/>
+                <h2 style={{position: `absolute`, top: `40px`, right: `50px`, fontSize: `4rem`, color: `var(--white-color)`}}>Our Values</h2>
+              </div>
+              <p>KINDNESS in our COMMUNICATION towards our fellow practitioners leading to a steadfast GROWTH and cultivating PROFESSIONALISM. We are committed to QUALITY, CONSISTENCY and COURTSEY at all times.
+              </p>
+            </div>
+
+            <div style={{borderBottom: `2px solid var(--main-color)`, padding: `4rem 4rem`}}>
+              <div style={{position: `relative`}}>
+                <Img fluid={data.mission.edges[0].node.fluid} className="main-logo" alt="mission" style={{width: `100%`, borderRadius: `2.5rem`, height: `300px`}}/>
+                <h2 style={{position: `absolute`, top: `100px`, right: `50px`, fontSize: `4rem`, color: `var(--white-color)`}}>Our Mission</h2>
+              </div>
+              <p>PRAKTICE will work to create a powerful community of Independent practitioners which can help and enrich one another and grow together by establishing a network of knowledge, clients, methodologies, ideas and collaborations.
+              </p>
+            </div>
+
+            {/* <div className="about-vision" style={{borderTop: '1px solid black'}}>
                 <h2 style={{textAlign: 'left'}}>Our Values:</h2>
                 <div className="values">
                     <p style={{textAlign: 'left'}}>KINDNESS in our COMMUNICATION towards our fellow practitioners and customers which will create a steadfast PROFESSIONAL path of mutual GROWTH, increasing KNOWLEDGE and ETHICS</p>
@@ -195,10 +228,7 @@ const About = () => {
                 <p>Rent by the hour<br />
                 Help their customers deal with their Self Image which is the hardest obstacle for new ppl try to work out when they go to a shared space.
                 </p>
-            </div>
-
-          <Img fluid={data.faq.edges[0].node.fluid} className="faq" alt="faq" style={{width: `100%`}}/>
-          <Faq />
+            </div> */}
         </Container>
     )
 }

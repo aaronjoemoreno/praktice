@@ -15,7 +15,7 @@ const Container = styled.div`
 const CertificationAndInsurance = () => {
     return (
         <Container>
-            <h3><span class="number">First:</span> Before being able to schedule at Pra<span style={{color: 'var(--secondary-color)'}}>k</span>tice, you'll need to send us few documents...</h3>
+            <h3><span className="number">First:</span> Before being able to schedule at Pra<span style={{color: 'var(--secondary-color)'}}>k</span>tice, you'll need to send us few documents...</h3>
             <JotformEmbed src="https://form.jotform.com/210158648836160" />
         </Container>
     )

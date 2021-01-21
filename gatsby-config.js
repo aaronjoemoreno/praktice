@@ -1,8 +1,10 @@
 module.exports = {
   siteMetadata: {
     title: `Praktice`,
-    description: `PRAKTICE is a versatile wellness studio offering practitioners a private space to serve their clients at a reasonable cost.`,
+    description: `An exclusve versatile wellness studio serving practitioners
+    and their clients at a reasonable cost.`,
     author: `@aaronjoemoreno`,
+    details: ['One On One', 'Virtual Classes', 'Photoshoots', 'Education', 'Consultations', 'Webinars']
   },
   plugins: [
     `gatsby-plugin-styled-components`,
@@ -26,18 +28,6 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
-      },
-      resolve: "gatsby-plugin-firebase",
-      options: {
-        credentials: {
-          apiKey: process.env.GATSBY_FIREBASE_API_KEY,
-          authDomain: process.env.GATSBY_FIREBASE_AUTH_DOMAIN,
-          databaseURL: process.env.GATSBY_FIREBASE_PROJECT_ID,
-          projectId: process.env.GATSBY_FIREBASE_STORAGE_BUCKET,
-          storageBucket: process.env.GATSBY_FIREBASE_MESSAGING_SENDER_ID,
-          messagingSenderId: process.env.GATSBY_FIREBASE_APP_ID,
-          appId: process.env.GATSBY_FIREBASE_MEASUREMENT_ID,
-        }
       },
       resolve: `gatsby-source-sanity`,
       options: {

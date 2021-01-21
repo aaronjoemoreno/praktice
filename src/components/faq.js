@@ -15,7 +15,7 @@ const Container = styled.div`
 const Faq = () => {
     return (
         <Container>
-              <div class="questions">
+              <div className="questions">
               <p className="question">What is PRAKTICE?</p>
               <p className="answer">PRAKTICE is a wellness studio with limited wellness accessories and no machines. Our goal is to allow a diverse roster of wellness practitioners to rent a space where they can develop their skills.</p>
 

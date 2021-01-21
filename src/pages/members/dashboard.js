@@ -20,7 +20,7 @@ const Dashboard = () => {
         <Container>
             <MemberShipNav />
             <Logo />
-            <h1>Welcome "BUSINESS NAME"</h1>
+            <h1>Welcome!</h1>
 
             {status === 1 &&
                 <CertificationAndInsurance />

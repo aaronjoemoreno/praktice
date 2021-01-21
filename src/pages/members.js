@@ -3,14 +3,9 @@ import styled from 'styled-components'
 import Header from '../components/header'
 import Logo from '../components/logo'
 import Scheduler from '../components/scheduler'
-// import Firebase from '../components/Firebase/firebase'
-import firebase from "gatsby-plugin-firebase"
+import Firebase from '../components/Firebase/firebase'
 import FirebaseState from '../components/Firebase/FirebaseState'
 import { navigate } from 'gatsby'
-// import FirebaseContext from '../components/Firebase/context';
-
-// import { useAuth } from "../context/AuthContext"
-// import { AuthProvider } from '../context/AuthContext'
 
 const Container = styled.div`
     width: 100%;
@@ -151,12 +146,12 @@ const Members = () => {
     const [newMember, setNewMember] = useState(true);
     const [email, setEmail] = useState('')
     const [password, setpassword] = useState('')
-    const [errors, setErrors] = useState(false);
+    const [errors, setErrors] = useState(false)
 
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        firebase.auth().signInWithEmailAndPassword(email, password)
+        Firebase.auth().signInWithEmailAndPassword(email, password)
         .then(res => {
             console.log(res);
             navigate("/members/dashboard")

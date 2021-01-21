@@ -10,6 +10,7 @@ import './praktices.css'
 const Container = styled.div`
     text-align: center;
     margin: 0 auto;
+    padding: 15rem;
 
     .details{
         width: 80%;
@@ -17,7 +18,7 @@ const Container = styled.div`
     }
 
     .my-masonry-grid{
-        background: black;
+        background: white;
     }
 
     .praktices{
@@ -28,14 +29,14 @@ const Container = styled.div`
     }
 
     .praktice img{
-        /* border-radius: .5rem; */
+        border-radius: 1rem;
     }
 `
 
 const Praktices = ({data}) => {
     const breakpointColumnsObj = {
-        default: 4,
-        1100: 3,
+        default: 2,
+        1100: 2,
         700: 2,
         500: 1
       };

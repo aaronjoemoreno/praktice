@@ -9,16 +9,20 @@ const Container = styled.div`
     text-align: center;
 
     .tabs{
-        width: 100%;
+        width: 60%;
+        margin: 0 auto;
         display: grid;
+        grid-gap: 2rem;
         grid-template-columns: repeat(3, 1fr);
         text-align: center;
     }
 
     .tab{
         font-size: 2rem;
+        height: 40px;
         background: var(--main-white);
         border: .2px solid var(--main-color);
+        border-radius: 2.5rem;
     }
 
     .tab:hover{
@@ -113,7 +117,7 @@ export const Contact = () => {
 
 return (
         <Container id="contact">
-            <h1>Contact</h1>
+            <h1>Contact Us</h1>
             <div className="tabs">
                 <button className={`email tab ${tab == "email" ? "active" : ""}`} value="email" onClick={contactTab}>Email</button>
                 <button className={`schedule tab ${tab == "schedule" ? "active" : ""}`} value="schedule" onClick={contactTab}>Schedule</button>
