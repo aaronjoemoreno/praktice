@@ -3,9 +3,9 @@ import styled from 'styled-components'
 import Header from '../components/header'
 import Logo from '../components/logo'
 import Scheduler from '../components/scheduler'
-import Firebase from '../components/Firebase/firebase'
-import FirebaseState from '../components/Firebase/FirebaseState'
-import { navigate } from 'gatsby'
+// import Firebase from '../components/Firebase/firebase'
+// import FirebaseState from '../components/Firebase/FirebaseState'
+// import { navigate } from 'gatsby'
 
 const Container = styled.div`
     width: 100%;
@@ -151,24 +151,24 @@ const Members = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        Firebase.auth().signInWithEmailAndPassword(email, password)
-        .then(res => {
-            console.log(res);
-            navigate("/members/dashboard")
-        })
-        .catch((err) => {
-            setErrors("username or password is incorrect")
-            console.warn(err);
+        // Firebase.auth().signInWithEmailAndPassword(email, password)
+        // .then(res => {
+        //     console.log(res);
+        //     navigate("/members/dashboard")
+        // })
+        // .catch((err) => {
+        //     setErrors("username or password is incorrect")
+        //     console.warn(err);
 
-            setTimeout(() =>{
-                setErrors('')
-            },4000)
-        });
+        //     setTimeout(() =>{
+        //         setErrors('')
+        //     },4000)
+        // });
     }
 
     return (
         <>
-            <FirebaseState>
+            {/* <FirebaseState> */}
                 <Container>
                     <Header />
                     <Logo />
@@ -201,7 +201,7 @@ const Members = () => {
                         </SignInCard>
                     }
                 </Container>
-            </FirebaseState>
+            {/* </FirebaseState> */}
         </>
     )
 }
