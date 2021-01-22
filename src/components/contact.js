@@ -9,7 +9,7 @@ const Container = styled.div`
     text-align: center;
 
     .tabs{
-        width: 60%;
+        width: 80%;
         margin: 0 auto;
         display: grid;
         grid-gap: 2rem;
@@ -42,7 +42,7 @@ const Container = styled.div`
 `
 
 const Email = styled.div`
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     padding-top: 5rem;
     margin-top: 7rem;
@@ -59,6 +59,10 @@ const Email = styled.div`
         font-size: 2rem;
         margin: 1rem;
         border: .5px solid var(--main-color);
+    }
+
+    input:focus{
+        background: #F5E9E9;
     }
 
     button{
@@ -88,7 +92,7 @@ const Email = styled.div`
 `
 
 const Call = styled.div`
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     padding-top: 5rem;
     margin-top: 7rem;
@@ -130,8 +134,9 @@ return (
                     <form method="post" netlify-honeypot="bot-field" data-netlify="true" name="contact">
                         <input type="hidden" name="bot-field" />
                         <input type="hidden" name="form-name" value="contact" />
-                        <input type="text" name="name" placeholder="name"/>
-                        <input type="email" name="email" placeholder="email"/>
+                        <input type="text" name="name" placeholder="Full Name"/>
+                        <input type="email" name="email" placeholder="Email"/>
+                        <input type="phone" name="email" placeholder="Phone"/>
                         <textarea name="message" placeholder="message"></textarea>
                         <button type="submit">Send</button>
                     </form>
@@ -145,7 +150,7 @@ return (
             {tab === 'call' &&
                 <Call>
                     <h2>Give Us a Call:</h2>
-                    <h2>Tel: <a href="tel:347-599-2832">347-599-2832</a></h2>
+                    <h2>Tel: <a href="tel:646-399-1477">347-599-2832</a></h2>
                 </Call>
             }
         </Container>

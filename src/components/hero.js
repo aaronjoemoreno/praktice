@@ -63,6 +63,10 @@ const Container = styled.div`
       .main-logo{
         width: 70%;
       }
+
+      .details{
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
 
 `
