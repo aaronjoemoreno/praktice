@@ -38,6 +38,16 @@ const Container = styled.div`
 
     @media (max-width: 768px) {
         width: 90%;
+
+        .tabs{
+            width: 70%;
+            grid-gap: 1rem;
+    }
+
+        .tab{
+            font-size: 1.4rem;
+            height: 30px;
+        }
     }
 `
 
@@ -150,7 +160,7 @@ return (
             {tab === 'call' &&
                 <Call>
                     <h2>Give Us a Call:</h2>
-                    <h2>Tel: <a href="tel:646-399-1477">347-599-2832</a></h2>
+                    <h2>Tel: <a href="tel:646-399-1477">646-399-1477</a></h2>
                 </Call>
             }
         </Container>
