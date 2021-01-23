@@ -99,6 +99,14 @@ const Container = styled.div`
         }
       }
 
+      .value{
+        h2{
+          top: 10px !important;
+          right: 10px !important;
+        }
+
+      }
+
     }
 `
 
@@ -190,7 +198,7 @@ const About = () => {
               </p>
             </div>
 
-            <div style={{borderBottom: `2px solid var(--main-color)`, padding: `4rem 4rem`}}>
+            <div style={{borderBottom: `2px solid var(--main-color)`, padding: `4rem 4rem`}} className="value">
               <div style={{position: `relative`}}>
                 <Img fluid={data.why.edges[0].node.fluid} className="main-logo" alt="mission" style={{width: `100%`, borderRadius: `2.5rem`, height: `300px`}}/>
                 <h2 style={{position: `absolute`, top: `40px`, right: `50px`, fontSize: `4rem`, color: `var(--white-color)`}}>Our Values</h2>
