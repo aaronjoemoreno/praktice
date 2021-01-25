@@ -38,6 +38,17 @@ const Container = styled.div`
     text-decoration-color: var(--secondary-color);
   }
 
+  .dropdown{
+    position: absolute;
+    top: 50px;
+    width: 200px;
+    background: white;
+
+    ul{
+      list-style: none;
+    }
+  }
+
 
   @media (max-width: 768px) {
     position: relative;
@@ -74,6 +85,7 @@ const Container = styled.div`
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [navState, setNavState] = useState('')
+  const [display, setDisplay] = useState(false);
 
   useEffect(() =>{
     isOpen ? setNavState('open') : setNavState('')
@@ -88,7 +100,23 @@ const Header = () => {
       </Link>
 
       <Link to="/about">
-        <h4>ABOUT</h4>
+        {/* <h4 onMouseOver={() => setDisplay(true)} onClick={() => display ? setDisplay(false): setDisplay(true)}>ABOUT</h4> */}
+        <h4>About</h4>
+        {display &&
+        <div className="dropdown">
+          <ul>
+            <li>
+              <a href="#covid">Covid 19</a>
+            </li>
+            <li>
+              <a href="#covid">Our Values</a>
+            </li>
+            <li>
+              <a href="#covid">Our Mission</a>
+            </li>
+          </ul>
+        </div>
+      }
       </Link>
 
       <Link to="/praktices">
@@ -119,7 +147,7 @@ const Header = () => {
       </Link>
 
       <Link to="/about">
-        ABOUT
+        <h4>ABOUT</h4>
       </Link>
 
       <Link to="/praktices">

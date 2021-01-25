@@ -5,6 +5,8 @@ import { Link } from 'gatsby'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
 import Masonry from 'react-masonry-css'
+import ApplicationProcess from '../components/applicationProcess'
+import Button from '../components/button'
 import './praktices.css'
 
 const Container = styled.div`
@@ -30,24 +32,10 @@ const Container = styled.div`
     .praktice img{
         border-radius: 1rem;
     }
-`
 
-const BookingContainer = styled.div`
-    width: 70%;
-    margin: 0 auto;
-    text-align: center;
-
-    h2{
-        text-align: left;
-        padding-left: 5rem;
+    .button{
+        margin-bottom: 2rem;
     }
-
-    ul{
-        font-size: 1.5rem;
-        list-style: none;
-        text-align: left
-    }
-
 `
 
 const Praktices = ({data}) => {
@@ -58,8 +46,6 @@ const Praktices = ({data}) => {
         500: 1
       };
     const praktices = data.praktices.nodes;
-
-    // console.log(praktices);
 
     return (
         <Container>
@@ -89,22 +75,12 @@ const Praktices = ({data}) => {
                     )
                 })}
             </Masonry>
-
-            <BookingContainer>
-                <h2>Application Process</h2>
-                <ul>
-                    <li>1.	A tour in the studio, virtually or in person before booking is required. </li>
-                    <li>2.	Following your tour, you will receive a one-time code to open your profile on our members and booking platform. </li>
-                    <li>3. In our booking platform you can upload your professional certification or license and a certificate of insurance for review . </li>
-                    <li>4.	Review and sign our agreement and waiver forms. </li>
-                    <li>5. We will request that you add PRAKTICE LLC as the additional Insured to your COI.</li>
-                    <li>6. Congrat! You can now book PRAKTICE </li>
-                </ul>
-
-
-            </BookingContainer>
-
-
+            <div className="button">
+                <Link to="/contact">
+                    <Button text="Contact Us"/>
+                </Link>
+            </div>
+            <ApplicationProcess />
         </Container>
     )
 }
