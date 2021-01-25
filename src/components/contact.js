@@ -134,7 +134,7 @@ return (
             <h1>Contact Us</h1>
             <div className="tabs">
                 <button className={`email tab ${tab == "email" ? "active" : ""}`} value="email" onClick={contactTab}>Email</button>
-                <button className={`schedule tab ${tab == "schedule" ? "active" : ""}`} value="schedule" onClick={contactTab}>Schedule</button>
+                <button className={`schedule tab ${tab == "schedule" ? "active" : ""}`} value="schedule" onClick={contactTab}>Schedule a Tour</button>
                 <button className={`call tab ${tab == "call" ? "active" : ""}`} value="call" onClick={contactTab}>Call</button>
             </div>
 

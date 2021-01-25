@@ -71,7 +71,7 @@ const Card = styled.div`
 
         @media (max-width: 768px) {
             font-size: 2rem;
-            width: 10rem;
+            width: 100%;
             height: 5rem;
             line-height: 4rem;
         }
@@ -135,9 +135,9 @@ const Card = styled.div`
 
         @media (max-width: 768px) {
             font-size: 2rem;
-            width: 10rem;
             height: 5rem;
             line-height: 4rem;
+            width: 90%;
         }
     `
 

@@ -9,7 +9,7 @@ import Img from 'gatsby-image';
 
 const Container = styled.div`
     text-align: center;
-    padding-bottom: 5rem;
+    padding-bottom: 4rem;
 
     .main-logo{
         width: 40%;
@@ -32,11 +32,13 @@ const Container = styled.div`
       grid-template-columns: repeat(3, 1fr);
 
       h3{
+        width: 15rem;
         border-radius: 1rem;
         background: var(--light-grey-color);
         color: var(--main-color);
         padding: 1rem 1rem;
-        margin: 1rem;
+        margin: 0 auto;
+        margin-top: 1rem;
       }
     }
 
@@ -44,10 +46,10 @@ const Container = styled.div`
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-gap: 2rem;
-      width: 80%;
+      width: 70%;
       margin: 0 auto;
       padding-top: 2rem;
-      padding-bottom: 2rem;
+      padding-bottom: 4rem;
 
       img{
         border-radius: 2.5rem;
@@ -104,7 +106,8 @@ const Hero = () => {
     return (
         <Container>
             <Logo />
-            <h2>{data.site.siteMetadata.description}</h2>
+            <h2>An exclusve versatile wellness studio serving practitioners <br/>
+    and their clients at a reasonable cost.</h2>
             <div className="details">
               {data.site.siteMetadata.details.map(item => {
                 return(<h3 key={item}>{item}</h3>)

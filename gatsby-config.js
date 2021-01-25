@@ -1,8 +1,6 @@
 module.exports = {
   siteMetadata: {
     title: `Praktice`,
-    description: `An exclusve versatile wellness studio serving practitioners
-    and their clients at a reasonable cost.`,
     author: `@aaronjoemoreno`,
     details: ['One On One', 'Virtual Classes', 'Photoshoots', 'Education', 'Consultations', 'Webinars']
   },

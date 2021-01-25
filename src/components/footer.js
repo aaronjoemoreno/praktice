@@ -20,10 +20,7 @@ const Container = styled.div`
 const LogoBorder = styled.div`
     width: 100%;
     border-top: 1px solid var(--main-color);
-
-    img{
-
-    }
+    padding-top: 4rem;
 `
 const LinkContainer = styled.div`
     width: 100%;

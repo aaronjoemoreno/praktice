@@ -2,10 +2,10 @@
 
 :root{
     font-size: 10px;
-    --main-color: black;
+    --main-color: #575252;
     --secondary-color: red;
     --white-color: #fff;
-    --grey-color: rgb(169, 169, 169);
+    --grey-color: rgb(128, 128, 128);
     --light-grey-color: #E7E7E7;
     font-family: 'Questrial', sans-serif;
     font-weight: 100;

@@ -14,7 +14,6 @@ const Container = styled.div`
     grid-template-columns: repeat(5, 1fr);
     text-align: center;
     align-items: baseline;
-    padding-bottom: 2rem;
     background: var(--white-color);
   }
 
@@ -35,6 +34,8 @@ const Container = styled.div`
 
   a:hover{
     text-decoration: underline var(--secondary-color);
+    text-decoration-line: underline;
+    text-decoration-color: var(--secondary-color);
   }
 
 

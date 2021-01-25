@@ -9,11 +9,13 @@ const Container = styled.div`
     margin: 0 auto;
     border-top: 1px solid black;
     text-align: center;
-    padding-bottom: 5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 
     p{
-        font-size: 2rem;
-
+      margin: 0 auto;
+      font-size: 2rem;
+      width: 80%;
     }
 
     q{
@@ -175,20 +177,22 @@ const About = () => {
         <Container>
             <h1>ABOUT</h1>
             <p>PRAKTICE is a private wellness studio designed to empower practitioners. Our unique and versatile space allows practitioners to work privately and independently, or with their clients to establish themselves as authorities in their fields.</p>
+            <br/>
+            <br/>
             <p>Our studio is a 150 square foot space paved with interlocking rubber tiles and comes equipped with stall wall bars, polymetric stacks, stability balls, TRX, medicine balls, a dumbbell rack, a stretching table, and more accessories that will afford you the flexibility to train your clients in different modalities.
             </p>
 
             <Img fluid={data.pilates.edges[0].node.fluid} className="main-logo" alt="pilates" style={{margin: `0 auto`, borderRadius: `2.5rem`, marginTop: `4rem`, marginBottom: `4rem`}}/>
 
-            <p>We strive to be an incubator that puts the needs of the practitioner first. While practitioners are the key players affecting the lives, health and fitness industry, their concerns are often not considered by the institutions through which they work.</p>
+            <p style={{paddingBottom: `4rem`}}>We strive to be an incubator that puts the needs of the practitioner first. While practitioners are the key players affecting the lives, health and fitness industry, their concerns are often not considered by the institutions through which they work.</p>
 
-            <div style={{borderTop: `2px solid var(--main-color)`, borderBottom: `2px solid var(--main-color)`, padding: `4rem 4rem`}}>
-              <q>Practice makes perfect. 
+            <div style={{borderTop: `2px solid var(--main-color)`, borderBottom: `2px solid var(--main-color)`, paddingTop: `4rem`}}>
+              <q style={{fontSize: `2.5rem`}}>Practice makes perfect. 
               After a long time of practicing, our work will become natural, skillful, swift, and steady.
               </q>
               <p>Bruce Lee</p>
 
-              <Img fluid={data.about.edges[0].node.fluid} className="main-logo" alt="praktice logo" style={{margin: `0 auto`}}/>
+              <Img fluid={data.about.edges[0].node.fluid} className="main-logo" alt="praktice logo" style={{margin: `0 auto`, marginTop: `-100px`,marginBottom: `-100px`, zIndex: `-100`}}/>
             </div>
 
             <div style={{borderBottom: `2px solid var(--main-color)`, padding: `4rem 4rem`}}>
@@ -200,8 +204,8 @@ const About = () => {
 
             <div style={{borderBottom: `2px solid var(--main-color)`, padding: `4rem 4rem`}} className="value">
               <div style={{position: `relative`}}>
-                <Img fluid={data.why.edges[0].node.fluid} className="main-logo" alt="mission" style={{width: `100%`, borderRadius: `2.5rem`, height: `300px`}}/>
-                <h2 style={{position: `absolute`, top: `40px`, right: `50px`, fontSize: `4rem`, color: `var(--white-color)`}}>Our Values</h2>
+                <Img fluid={data.why.edges[0].node.fluid} className="main-logo" alt="mission" style={{width: `100%`, borderRadius: `2.5rem`, height: `300px`, marginTop: `2rem`, marginBottom: `4rem`}}/>
+                <h2 style={{position: `absolute`, top: `0px`, right: `50px`, fontSize: `6rem`, color: `var(--white-color)`}}>Our Values</h2>
               </div>
               <p>KINDNESS in our COMMUNICATION towards our fellow practitioners leading to a steadfast GROWTH and cultivating PROFESSIONALISM. We are committed to QUALITY, CONSISTENCY and COURTSEY at all times.
               </p>
@@ -209,8 +213,8 @@ const About = () => {
 
             <div style={{borderBottom: `2px solid var(--main-color)`, padding: `4rem 4rem`}}>
               <div style={{position: `relative`}}>
-                <Img fluid={data.mission.edges[0].node.fluid} className="main-logo" alt="mission" style={{width: `100%`, borderRadius: `2.5rem`, height: `300px`}}/>
-                <h2 style={{position: `absolute`, top: `100px`, right: `50px`, fontSize: `4rem`, color: `var(--white-color)`}}>Our Mission</h2>
+                <Img fluid={data.mission.edges[0].node.fluid} className="main-logo" alt="mission" style={{width: `100%`, borderRadius: `2.5rem`, height: `300px`, marginTop: `2rem`, marginBottom: `4rem`}}/>
+                <h2 style={{position: `absolute`, top: `100px`, right: `50px`, fontSize: `6rem`, color: `var(--white-color)`, marginBottom: `4rem`}}>Our Mission</h2>
               </div>
               <p>PRAKTICE will work to create a powerful community of Independent practitioners which can help and enrich one another and grow together by establishing a network of knowledge, clients, methodologies, ideas and collaborations.
               </p>
