@@ -10,7 +10,7 @@ import './praktices.css'
 const Container = styled.div`
     text-align: center;
     margin: 0 auto;
-    padding: 15rem;
+    width: 80%;
 
     .details{
         width: 80%;
@@ -23,14 +23,31 @@ const Container = styled.div`
 
     .praktices{
         display: grid;
+        grid-column-gap: 10rem;
         grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-        padding: 2rem;
     }
 
     .praktice img{
         border-radius: 1rem;
     }
+`
+
+const BookingContainer = styled.div`
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+
+    h2{
+        text-align: left;
+        padding-left: 5rem;
+    }
+
+    ul{
+        font-size: 1.5rem;
+        list-style: none;
+        text-align: left
+    }
+
 `
 
 const Praktices = ({data}) => {
@@ -65,13 +82,29 @@ const Praktices = ({data}) => {
                         <div className="praktice" key={praktice.title} style={{position: 'relative'}}>
                             <Link to="/contact">
                                 <Img fluid={praktice.image.asset.fluid} style={{height: Math.random() * (500 - 200) + 200}} />
-                                <h3 style={{position: 'absolute', top: 0, left: '5px', background: 'red', color: 'white'}}>{praktice.title}</h3>
+                                <h3 style={{color: `var(--main-color)`}}>{praktice.title}</h3>
                             </Link>
                         </div>
                         </>
                     )
                 })}
             </Masonry>
+
+            <BookingContainer>
+                <h2>Application Process</h2>
+                <ul>
+                    <li>1.	A tour in the studio, virtually or in person before booking is required. </li>
+                    <li>2.	Following your tour, you will receive a one-time code to open your profile on our members and booking platform. </li>
+                    <li>3. In our booking platform you can upload your professional certification or license and a certificate of insurance for review . </li>
+                    <li>4.	Review and sign our agreement and waiver forms. </li>
+                    <li>5. We will request that you add PRAKTICE LLC as the additional Insured to your COI.</li>
+                    <li>6. Congrat! You can now book PRAKTICE </li>
+                </ul>
+
+
+            </BookingContainer>
+
+
         </Container>
     )
 }
