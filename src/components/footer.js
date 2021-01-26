@@ -2,6 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import Logo from '../components/logo'
 import { Link } from 'gatsby'
+import { useStaticQuery, graphql } from "gatsby"
+import Img from 'gatsby-image'
 
 
 const Container = styled.div`
@@ -37,16 +39,23 @@ const LinkContainer = styled.div`
 
     .center{
         display: grid;
+        padding-top: 3rem;
         grid-template-columns: repeat(2, 1fr);
 
-        h3{
+
+        .social-img{
+            margin: 0 auto;
+            width: 60px;
+        }
+
+        /* h3{
             margin: 0 auto;
             width: 100px;
             height: 100px;
             line-height: 100px;
             border-radius: 100px;
             border: 1px solid var(--main-color);
-        }
+        } */
     }
 
     @media (max-width: 768px) {
@@ -73,6 +82,28 @@ const LocationContainer = styled.div`
 `
 
 const Footer = () => {
+    const data = useStaticQuery(graphql`
+    query{
+      twitter: allImageSharp(filter: {fluid: {originalName: {eq: "twitter.png"}}}) {
+        edges {
+          node {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+      instagram: allImageSharp(filter: {fluid: {originalName: {eq: "instagram.png"}}}) {
+        edges {
+          node {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    }
+  `)
 
     return (
         <Container>
@@ -89,8 +120,16 @@ const Footer = () => {
                     </Link>
                 </div>
                 <div className="center">
-                    <h3>INS</h3>
-                    <h3>Tw</h3>
+                <div className="social-img">
+                    <a href="https://twitter.com/prakticel" target="_blank">
+                        <Img fluid={data.twitter.edges[0].node.fluid} alt="twitter"/>
+                    </a>
+                </div>
+                <div className="social-img">
+                    <a href="https://instagram.com/praktice.nyc" target="_blank">
+                        <Img fluid={data.instagram.edges[0].node.fluid} alt="instagram"/>
+                    </a>
+                </div>
                 </div>
                 <div className="right">
                     <Link to="/about">

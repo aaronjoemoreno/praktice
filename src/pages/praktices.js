@@ -22,17 +22,20 @@ const Container = styled.div`
     .my-masonry-grid{
         background: white;
     }
+    .praktice{
+        margin: 1rem;
+        padding: 1rem;
+
+        img{
+            border-radius: 2rem;
+        }
+    }
 
     .praktices{
         display: grid;
-        grid-column-gap: 10rem;
+        grid-column-gap: 0rem;
         grid-template-columns: repeat(2, 1fr);
     }
-
-    .praktice img{
-        border-radius: 1rem;
-    }
-
     .button{
         margin-bottom: 2rem;
     }
@@ -50,6 +53,9 @@ const Praktices = ({data}) => {
     return (
         <Container>
             <Header />
+            <h2>Hello Practitioners. Welcome.
+            <br></br>
+            Meet Your New Home. </h2>
             <Logo />
             <div className="details" style={{maxWidth: "60%", paddingBottom: '5rem'}}>
                 <h3>If you do not see your Praktice <Link to="/contact">Contact Us!</Link></h3>
@@ -65,9 +71,9 @@ const Praktices = ({data}) => {
                 {praktices.map(praktice => {
                     return(
                         <>
-                        <div className="praktice" key={praktice.title} style={{position: 'relative'}}>
+                        <div className="praktice" key={praktice.title} style={{position: 'relative', boxShadow: `0px 3px 15px rgba(0,0,0,0.4)`, paddingBottom: `.3rem`, borderRadius: `2rem`}}>
                             <Link to="/contact">
-                                <Img fluid={praktice.image.asset.fluid} style={{height: Math.random() * (500 - 200) + 200}} />
+                                <Img fluid={praktice.image.asset.fluid} style={{height: Math.random() * (500 - 200) + 200, borderRadius: `1rem;`}} />
                                 <h3 style={{color: `var(--main-color)`}}>{praktice.title}</h3>
                             </Link>
                         </div>

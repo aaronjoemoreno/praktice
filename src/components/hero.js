@@ -26,7 +26,7 @@ const Container = styled.div`
     }
 
     .details{
-      width: 80%;
+      width: 50%;
       margin: 0 auto;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -103,6 +103,7 @@ const Hero = () => {
       }
     }
   `)
+
     return (
         <Container>
             <Logo />

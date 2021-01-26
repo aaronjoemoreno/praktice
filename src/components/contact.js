@@ -134,7 +134,7 @@ return (
             <h1>Contact Us</h1>
             <div className="tabs">
                 <button className={`email tab ${tab == "email" ? "active" : ""}`} value="email" onClick={contactTab}>Email</button>
-                <button className={`schedule tab ${tab == "schedule" ? "active" : ""}`} value="schedule" onClick={contactTab}>Schedule a Tour</button>
+                <button className={`schedule tab ${tab == "schedule" ? "active" : ""}`} value="schedule" onClick={contactTab}>Tour</button>
                 <button className={`call tab ${tab == "call" ? "active" : ""}`} value="call" onClick={contactTab}>Call</button>
             </div>
 
@@ -160,7 +160,7 @@ return (
             {tab === 'call' &&
                 <Call>
                     <h2>Give Us a Call:</h2>
-                    <h2>Tel: <a href="tel:646-399-1477">646-399-1477</a></h2>
+                    <h2>Tel: <a href="tel:917-945-1287">917-945-1287</a></h2>
                 </Call>
             }
         </Container>

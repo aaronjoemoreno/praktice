@@ -101,7 +101,7 @@ const Header = () => {
 
       <Link to="/about">
         {/* <h4 onMouseOver={() => setDisplay(true)} onClick={() => display ? setDisplay(false): setDisplay(true)}>ABOUT</h4> */}
-        <h4>About</h4>
+        <h4>ABOUT</h4>
         {display &&
         <div className="dropdown">
           <ul>
