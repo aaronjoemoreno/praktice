@@ -56,6 +56,15 @@ const Container = styled.div`
       }
     }
 
+    @media (max-width: 1080px) {
+      .details{
+        h3{
+          font-size: 1.5rem;
+          width: 10rem;
+        }
+      }
+    }
+
     @media (max-width: 768px) {
       .image-container{
         grid-template-columns: 1fr;

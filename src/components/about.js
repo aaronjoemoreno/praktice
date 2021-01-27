@@ -57,6 +57,12 @@ const Container = styled.div`
       border-radius: 2.5rem;
     }
 
+    @media (max-width: 1080px) {
+      .quote{
+        padding: 5rem;
+      }
+    }
+
     @media (max-width: 768px) {
       .main-logo{
         width: 100%;
@@ -109,6 +115,12 @@ const Container = styled.div`
 
       }
 
+      .quote{
+        p{
+          padding: 2rem;
+        }
+      }
+
     }
 `
 
@@ -151,15 +163,6 @@ const About = () => {
               }
             }
           }
-          faq: allImageSharp(filter: {fluid: {originalName: {eq: "faq.jpg"}}}) {
-            edges {
-              node {
-                fluid {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-          }
           pilates: allImageSharp(filter: {fluid: {originalName: {eq: "pilates.jpg"}}}) {
             edges {
               node {
@@ -186,7 +189,7 @@ const About = () => {
 
             <p style={{paddingBottom: `4rem`}}>We strive to be an incubator that puts the needs of the practitioner first. While practitioners are the key players affecting the lives, health and fitness industry, their concerns are often not considered by the institutions through which they work.</p>
 
-            <div style={{borderTop: `2px solid var(--main-color)`, borderBottom: `2px solid var(--main-color)`, paddingTop: `4rem`}}>
+            <div className="quote" style={{borderTop: `2px solid var(--main-color)`, borderBottom: `2px solid var(--main-color)`, paddingTop: `4rem`}}>
               <q style={{fontSize: `2.5rem`}}>Practice makes perfect. 
               After a long time of practicing, our work will become natural, skillful, swift, and steady.
               </q>
@@ -219,27 +222,6 @@ const About = () => {
               <p>PRAKTICE will work to create a powerful community of Independent practitioners which can help and enrich one another and grow together by establishing a network of knowledge, clients, methodologies, ideas and collaborations.
               </p>
             </div>
-
-            {/* <div className="about-vision" style={{borderTop: '1px solid black'}}>
-                <h2 style={{textAlign: 'left'}}>Our Values:</h2>
-                <div className="values">
-                    <p style={{textAlign: 'left'}}>KINDNESS in our COMMUNICATION towards our fellow practitioners and customers which will create a steadfast PROFESSIONAL path of mutual GROWTH, increasing KNOWLEDGE and ETHICS</p>
-
-                    <Img fluid={data.values.edges[0].node.fluid} className="values-logo" alt="values" style={{width: `100%`}}/>
-                </div>
-
-                <h2 style={{textAlign: 'right'}}>Our Mission:</h2>
-                <div className="mission">
-                    <Img fluid={data.mission.edges[0].node.fluid} className="main-logo" alt="mission" style={{width: `100%`}}/>
-
-                    <p style={{textAlign: 'right'}}>PRAKTICE  will work to create a powerful community of Independent professional practitioners which can help, who can enrich each other and grow together by establishing a network of knowledge, clients, methodologies, ideas and collaborations.</p>
-                </div>
-                <p>This is why from today onward each certified and insured practitioner can use PRAKTICE to flourish, influence and break boundaries with their customers, on their own, or with colleagues.</p>
-
-                <p>Rent by the hour<br />
-                Help their customers deal with their Self Image which is the hardest obstacle for new ppl try to work out when they go to a shared space.
-                </p>
-            </div> */}
         </Container>
     )
 }

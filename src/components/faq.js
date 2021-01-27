@@ -17,6 +17,11 @@ const Container = styled.div`
 
     .questions{
         padding-top: 2rem;
+
+        p{
+          padding: 0;
+          margin: 0;
+        }
     }
 
     .question{
@@ -26,8 +31,8 @@ const Container = styled.div`
     }
 
     .answer{
-        margin-top: 0px !important;
         text-align: left;
+        margin-bottom: 2rem !important;
     }
 `
 

@@ -141,7 +141,7 @@ return (
             {tab === 'email' &&
                 <Email>
                     <h2>Send Us a Message:</h2>
-                    <form method="post" netlify-honeypot="bot-field" data-netlify="true" name="contact">
+                    <form method="post" netlify-honeypot="bot-field" data-netlify="true" data-netlify-recaptcha="true" name="contact">
                         <input type="hidden" name="bot-field" />
                         <input type="hidden" name="form-name" value="contact" />
                         <input type="text" name="name" placeholder="Full Name"/>
