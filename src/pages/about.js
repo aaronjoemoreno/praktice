@@ -23,7 +23,7 @@ const Container = styled.div`
       }
 `
 
-const About = ({data}) => {
+const About = ({ data }) => {
     return (
         <Container>
             <Header />
