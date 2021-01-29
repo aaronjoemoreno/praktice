@@ -27,6 +27,7 @@ const ContactContianer = styled.div`
 
         h3{
             text-align: left;
+            padding-left: 1rem;
         }
     }
 
