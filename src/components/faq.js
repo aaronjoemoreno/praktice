@@ -34,6 +34,33 @@ const Container = styled.div`
         text-align: left;
         margin-bottom: 2rem !important;
     }
+
+    .main-img{
+      position: relative;
+
+      h1{
+        position: absolute;
+        top: 0;
+        left: 10%;
+        z-index: 999;
+        color: var(--white-color);
+        font-size: 10rem;
+      }
+
+      img{
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .main-img{
+        h1{
+          font-size: 5rem;
+        }
+      }
+    }
 `
 
 const Faq = () => {
@@ -53,7 +80,10 @@ const Faq = () => {
 
     return (
         <Container>
-            <Img fluid={data.faq.edges[0].node.fluid} className="header-img-profile" alt="male trainer"/>
+            <div className='main-img'>
+              <h1>FAQ</h1>
+              <Img fluid={data.faq.edges[0].node.fluid} className="header-img-profile" alt="F.A.Q."/>
+            </div>
             <div className="questions">
                 <p className="question">What is PRAKTICE?</p>
                 <p className="answer">PRAKTICE is a wellness studio with limited wellness accessories and no machines. Our goal is to allow a diverse roster of wellness practitioners to rent a space where they can develop their skills.</p>

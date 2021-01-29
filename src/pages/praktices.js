@@ -68,16 +68,14 @@ const Praktices = ({data}) => {
                 columnClassName="my-masonry-grid_column"
                 // style={{background: 'black'}}
                 >
-                {praktices.map(praktice => {
+                {praktices.map((praktice, index) => {
                     return(
-                        <>
-                        <div className="praktice" key={praktice.title} style={{position: 'relative', boxShadow: `0px 3px 15px rgba(0,0,0,0.4)`, paddingBottom: `.3rem`, borderRadius: `2rem`}}>
+                        <div className="praktice" key={index} style={{position: 'relative', boxShadow: `0px 3px 15px rgba(0,0,0,0.4)`, paddingBottom: `.3rem`, borderRadius: `2rem`}}>
                             <Link to="/contact">
-                                <Img fluid={praktice.image.asset.fluid} style={{height: Math.random() * (500 - 200) + 200, borderRadius: `1rem;`}} />
+                                <Img fluid={praktice.image.asset.fluid} style={{height: Math.random() * (500 - 200) + 200, borderRadius: `1rem`}} />
                                 <h3 style={{color: `var(--main-color)`}}>{praktice.title}</h3>
                             </Link>
                         </div>
-                        </>
                     )
                 })}
             </Masonry>

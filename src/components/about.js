@@ -1,6 +1,7 @@
 import React from 'react'
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, navigate } from "gatsby"
 import Img from 'gatsby-image'
+import Button from './button'
 import styled from 'styled-components'
 
 const Container = styled.div`
@@ -28,7 +29,7 @@ const Container = styled.div`
         margin-top: 2rem;
     }
 
-    .values, .mission{
+    .values{
         display: grid;
         width: 100%;
         max-width: 1000px;
@@ -68,7 +69,7 @@ const Container = styled.div`
         width: 100%;
       }
 
-      .values, .mission{
+      .values{
         grid-template-columns: repeat(1, 1fr);
       }
 
@@ -109,10 +110,20 @@ const Container = styled.div`
 
       .value{
         h2{
-          top: 10px !important;
+          padding: 0 !important;
+          margin: 0;
+          top: 0 !important;
           right: 10px !important;
         }
+      }
 
+      .mission{
+        h2{
+          padding: 0 !important;
+          margin: 0;
+          top: 50px !important;
+          right: 10px !important;
+        }
       }
 
       .quote{
@@ -124,7 +135,25 @@ const Container = styled.div`
     }
 `
 
-const About = () => {
+const CovidContainer = styled.div`
+  width: 100%;
+  margin: 0 auto;
+  border-bottom: 2px solid var(--main-color);
+  padding: 4rem 0 4rem 0;
+
+  .images{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @media (max-width: 1260px) {
+    .images{
+      grid-template-columns: 1fr;
+    }
+  }
+`
+
+const About = ({img}) => {
     const data = useStaticQuery(graphql`
     query MyQuery {
         about: allImageSharp(filter: {fluid: {originalName: {eq: "about.jpg"}}}) {
@@ -172,8 +201,25 @@ const About = () => {
               }
             }
           }
+          molekule: allImageSharp(filter: {fluid: {originalName: {eq: "molekule.jpg"}}}) {
+            edges {
+              node {
+                fluid {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+          sanitize: allImageSharp(filter: {fluid: {originalName: {eq: "sanitize.jpg"}}}) {
+            edges {
+              node {
+                fluid {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
         }
-
   `)
 
     return (
@@ -185,11 +231,26 @@ const About = () => {
             <p>Our studio is a 150 square foot space paved with interlocking rubber tiles and comes equipped with stall wall bars, polymetric stacks, stability balls, TRX, medicine balls, a dumbbell rack, a stretching table, and more accessories that will afford you the flexibility to train your clients in different modalities.
             </p>
 
-            <Img fluid={data.pilates.edges[0].node.fluid} className="main-logo" alt="pilates" style={{margin: `0 auto`, borderRadius: `2.5rem`, marginTop: `4rem`, marginBottom: `4rem`}}/>
+            <div style={{borderBottom: `2px solid var(--main-color)`, paddingBottom: `2rem`}}>
+              {img &&
 
-            <p style={{paddingBottom: `4rem`}}>We strive to be an incubator that puts the needs of the practitioner first. While practitioners are the key players affecting the lives, health and fitness industry, their concerns are often not considered by the institutions through which they work.</p>
+                  <Img fluid={img.about.edges[0].node.fluid} className="main-logo" alt="pilates" style={{margin: `0 auto`, borderRadius: `2.5rem`, marginTop: `4rem`, marginBottom: `4rem`}}/>
+              }
 
-            <div className="quote" style={{borderTop: `2px solid var(--main-color)`, borderBottom: `2px solid var(--main-color)`, paddingTop: `4rem`}}>
+              {!img &&
+                <Img fluid={data.pilates.edges[0].node.fluid} className="main-logo" alt="pilates" style={{margin: `0 auto`, borderRadius: `2.5rem`, marginTop: `4rem`, marginBottom: `4rem`}}/>
+              }
+
+              <p style={{paddingBottom: `4rem`}}>We strive to be an incubator that puts the needs of the practitioner first. While practitioners are the key players affecting the lives, health and fitness industry, their concerns are often not considered by the institutions through which they work.</p>
+              {img &&
+                  <Button text="Contact Us" clickedButton={() => navigate('/contact')}/>
+              }
+
+            </div>
+
+            {!img &&
+
+            <div className="quote" style={{paddingTop: `4rem`}}>
               <q style={{fontSize: `2.5rem`}}>Practice makes perfect. 
               After a long time of practicing, our work will become natural, skillful, swift, and steady.
               </q>
@@ -198,12 +259,19 @@ const About = () => {
               <Img fluid={data.about.edges[0].node.fluid} className="main-logo" alt="praktice logo" style={{margin: `0 auto`, marginTop: `-100px`,marginBottom: `-100px`, zIndex: `-100`}}/>
             </div>
 
-            <div style={{borderBottom: `2px solid var(--main-color)`, padding: `4rem 4rem`}}>
-              <h2>COVID 19 - KEEPING SAFE </h2>
+            }
 
-              <p>PRAKTICE offers the privacy and seclusion that cannot be found at most wellness centers. We are committed to keep an exclusive and germ free zone to maximize the safety of our practitioners and their clients. PRAKTICE is equipped with a Molekule Pro air purifier.  We allow ten minute intervals between sessions for cleaning, further ventilation and sanitization.  In addition, each practitioner is required to wipe down all equipment before and after use and wearing masks during sessions.
-              </p>
-            </div>
+            <CovidContainer>
+              <h2>COVID 19 - KEEPING SAFE </h2>
+              <div className="images">
+                <Img fluid={data.sanitize.edges[0].node.fluid} className="main-logo" alt="sanitize" style={{margin: `0 auto`, borderRadius: `2.5rem`, marginTop: `4rem`, marginBottom: `4rem`}}/>
+
+                <p>PRAKTICE offers the privacy and seclusion that cannot be found at most wellness centers. We are committed to keep an exclusive and germ free zone to maximize the safety of our practitioners and their clients. PRAKTICE is equipped with a Molekule Pro air purifier.  We allow ten minute intervals between sessions for cleaning, further ventilation and sanitization.  In addition, each practitioner is required to wipe down all equipment before and after use and wearing masks during sessions.
+                </p>
+
+                <Img fluid={data.molekule.edges[0].node.fluid} className="main-logo" alt="molekule" style={{margin: `0 auto`, borderRadius: `2.5rem`, marginTop: `4rem`, marginBottom: `4rem`, width: `30%`}}/>
+              </div>
+            </CovidContainer>
 
             <div style={{borderBottom: `2px solid var(--main-color)`, padding: `4rem 4rem`}} className="value">
               <div style={{position: `relative`}}>
@@ -214,7 +282,7 @@ const About = () => {
               </p>
             </div>
 
-            <div style={{borderBottom: `2px solid var(--main-color)`, padding: `4rem 4rem`}}>
+            <div style={{borderBottom: `2px solid var(--main-color)`, padding: `4rem 4rem`}} className="mission">
               <div style={{position: `relative`}}>
                 <Img fluid={data.mission.edges[0].node.fluid} className="main-logo" alt="mission" style={{width: `100%`, borderRadius: `2.5rem`, height: `300px`, marginTop: `2rem`, marginBottom: `4rem`}}/>
                 <h2 style={{position: `absolute`, top: `100px`, right: `50px`, fontSize: `6rem`, color: `var(--white-color)`, marginBottom: `4rem`}}>Our Mission</h2>

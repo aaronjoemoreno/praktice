@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { graphql, navigate} from 'gatsby'
 import Header from '../components/header'
 import Logo from '../components/logo'
 import Faq from '../components/faq'
@@ -11,19 +12,47 @@ const Container = styled.div`
     height: 100vh;
     width: 100vw;
     text-align: center;
+
+    .quote{
+        width: 50%;
+        margin: 0 auto;
+        padding: 2rem;
+        p{
+          padding: 2rem;
+        }
+      }
 `
 
-const About = () => {
+const About = ({data}) => {
     return (
         <Container>
             <Header />
             <Logo />
-            <AboutComponent/>
+            <div className="quote">
+                <q style={{fontSize: `2.5rem`, fontWeight: `100`, color: `var(--grey-color)`}}>“Practice is a means of inviting the perfection desired.” <br></br>
+                    Martha Graham
+                </q>
+            </div>
+            <AboutComponent img={data}/>
             <Faq />
-            <Button text="Contact Us"/>
+            <Button text="Contact Us" clickedButton={() => navigate('/contact')}/>
             <Footer />
         </Container>
     )
 }
 
 export default About
+
+export const query = graphql`
+    query {
+        about: allImageSharp(filter: {fluid: {originalName: {eq: "condition.jpg"}}}) {
+            edges {
+            node {
+                fluid {
+                ...GatsbyImageSharpFluid
+                }
+            }
+            }
+        }
+    }
+`

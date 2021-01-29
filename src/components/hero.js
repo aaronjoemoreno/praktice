@@ -80,6 +80,20 @@ const Container = styled.div`
       }
     }
 
+    @media (max-width: 490px) {
+      .details{
+        h3{
+          font-size: 1.2rem;
+          width: 8rem;
+        }
+      }
+    }
+
+    @media (max-width: 410px) {
+      .details{
+        grid-template-columns: 1fr;
+      }
+    }
 `
 
 const Hero = () => {
