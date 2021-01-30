@@ -7,6 +7,7 @@ import Img from 'gatsby-image'
 import Masonry from 'react-masonry-css'
 import ApplicationProcess from '../components/applicationProcess'
 import Button from '../components/button'
+import Footer from '../components/footer'
 import './praktices.css'
 
 const Container = styled.div`
@@ -85,6 +86,7 @@ const Praktices = ({data}) => {
                 </Link>
             </div>
             <ApplicationProcess />
+            <Footer />
         </Container>
     )
 }

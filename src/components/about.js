@@ -131,7 +131,23 @@ const Container = styled.div`
           padding: 2rem;
         }
       }
+    }
 
+    @media (max-width: 410px) {
+      .quote{
+        width: 100%;
+        padding: 0;
+
+        p{
+          margin: 0 auto;
+          text-align: center;
+          padding-bottom: 5rem;
+        }
+
+        .quote-img{
+          padding-bottom: 4rem;
+        }
+      }
     }
 `
 
@@ -256,7 +272,7 @@ const About = ({img}) => {
               </q>
               <p>Bruce Lee</p>
 
-              <Img fluid={data.about.edges[0].node.fluid} className="main-logo" alt="praktice logo" style={{margin: `0 auto`, marginTop: `-100px`,marginBottom: `-100px`, zIndex: `-100`}}/>
+              <Img fluid={data.about.edges[0].node.fluid} className="quote-img" alt="praktice logo" style={{margin: `0 auto`, marginTop: `-100px`,marginBottom: `-100px`, zIndex: `-100`}}/>
             </div>
 
             }

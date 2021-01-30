@@ -29,9 +29,8 @@ const About = ({ data }) => {
             <Header />
             <Logo />
             <div className="quote">
-                <q style={{fontSize: `2.5rem`, fontWeight: `100`, color: `var(--grey-color)`}}>“Practice is a means of inviting the perfection desired.” <br></br>
-                    Martha Graham
-                </q>
+                <q style={{fontSize: `2.5rem`, fontWeight: `100`, color: `var(--grey-color)`}}>Practice is a means of inviting the perfection desired.</q><br></br>
+                <p>Martha Graham</p>
             </div>
             <AboutComponent img={data}/>
             <Faq />
