@@ -143,7 +143,7 @@ const Card = styled.div`
 
 const Members = () => {
     //TODO - LOOK AT REFS
-    const [newMember, setNewMember] = useState(true);
+    const [newMember, setNewMember] = useState(false);
     const [email, setEmail] = useState('')
     const [password, setpassword] = useState('')
     const [errors, setErrors] = useState(false)
