@@ -8,9 +8,7 @@ import Img from 'gatsby-image'
 
 const Container = styled.div`
     width: 100%;
-    padding-top: 10rem;
-    margin-top: 5rem;
-
+    padding-top: 4rem;
 
     a{
         color: var(--main-color);
@@ -69,6 +67,12 @@ const LinkContainer = styled.div`
                 line-height: 50px;
                 border-radius: 50px;
             }
+        }
+
+
+        .center .social-img{
+            margin: 0 auto;
+            width: 45px;
         }
     }
 `

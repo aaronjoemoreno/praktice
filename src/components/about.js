@@ -11,7 +11,6 @@ const Container = styled.div`
     border-top: 1px solid black;
     text-align: center;
     padding-top: 2rem;
-    padding-bottom: 2rem;
 
     p{
       margin: 0 auto;
@@ -25,18 +24,6 @@ const Container = styled.div`
       border-left: 2px solid var(--secondary-color);
     }
 
-    .values h3{
-        margin-top: 2rem;
-    }
-
-    .values{
-        display: grid;
-        width: 100%;
-        max-width: 1000px;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 5rem;
-        padding-bottom: 2rem;
-    }
     h3{
         text-decoration: underline;
     }
@@ -69,60 +56,27 @@ const Container = styled.div`
         width: 100%;
       }
 
-      .values{
-        grid-template-columns: repeat(1, 1fr);
-      }
-
-      .values{
-        display: -webkit-box;
-        display: -moz-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -moz-box-orient: vertical;
-        -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        /* optional */
-        -webkit-box-align: start;
-        -moz-box-align: start;
-        -ms-flex-align: start;
-        -webkit-align-items: flex-start;
-        align-items: flex-start;
-
-        p{
-          -webkit-box-ordinal-group: 2;
-          -moz-box-ordinal-group: 2;
-          -ms-flex-order: 2;
-          -webkit-order: 2;
-          order: 2;
-        }
-
-        .values-logo{
-          -webkit-box-ordinal-group: 1;
-          -moz-box-ordinal-group: 1;
-          -ms-flex-order: 1;
-          -webkit-order: 1;
-          order: 1;
-        }
-      }
-
       .value{
         h2{
           padding: 0 !important;
           margin: 0;
           top: 0 !important;
           right: 10px !important;
+          font-size: 5rem !important;
         }
       }
 
       .mission{
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+
         h2{
           padding: 0 !important;
           margin: 0;
-          top: 50px !important;
+          top: 150px !important;
           right: 10px !important;
+          font-size: 5rem !important;
         }
       }
 
@@ -130,8 +84,21 @@ const Container = styled.div`
         p{
           padding: 2rem;
         }
+
+        img{
+          padding-top: 2rem;
+          padding-bottom: 2rem;
+        }
       }
     }
+
+
+    @media (max-width: 470px) {
+      .quote{
+        padding-bottom: 10rem;
+      }
+    }
+
 
     @media (max-width: 410px) {
       .quote{
@@ -143,10 +110,6 @@ const Container = styled.div`
           text-align: center;
           padding-bottom: 5rem;
         }
-
-        .quote-img{
-          padding-bottom: 4rem;
-        }
       }
     }
 `
@@ -154,8 +117,10 @@ const Container = styled.div`
 const CovidContainer = styled.div`
   width: 100%;
   margin: 0 auto;
+  margin-top: 2rem;
+  border-top: 2px solid var(--main-color);
   border-bottom: 2px solid var(--main-color);
-  padding: 4rem 0 4rem 0;
+  padding: 4rem 0 1rem 0;
 
   .images{
     display: grid;
@@ -247,7 +212,7 @@ const About = ({img}) => {
             <p>Our studio is a 150 square foot space paved with interlocking rubber tiles and comes equipped with stall wall bars, polymetric stacks, stability balls, TRX, medicine balls, a dumbbell rack, a stretching table, and more accessories that will afford you the flexibility to train your clients in different modalities.
             </p>
 
-            <div style={{borderBottom: `2px solid var(--main-color)`, paddingBottom: `2rem`}}>
+            <div style={{paddingBottom: `2rem`}}>
               {img &&
 
                   <Img fluid={img.about.edges[0].node.fluid} className="main-logo" alt="pilates" style={{margin: `0 auto`, borderRadius: `2.5rem`, marginTop: `4rem`, marginBottom: `4rem`}}/>
@@ -289,7 +254,7 @@ const About = ({img}) => {
               </div>
             </CovidContainer>
 
-            <div style={{borderBottom: `2px solid var(--main-color)`, padding: `4rem 4rem`}} className="value">
+            <div style={{borderBottom: `2px solid var(--main-color)`, padding: `4rem 0 4rem 0`}} className="value">
               <div style={{position: `relative`}}>
                 <Img fluid={data.why.edges[0].node.fluid} className="main-logo" alt="mission" style={{width: `100%`, borderRadius: `2.5rem`, height: `300px`, marginTop: `2rem`, marginBottom: `4rem`}}/>
                 <h2 style={{position: `absolute`, top: `0px`, right: `50px`, fontSize: `6rem`, color: `var(--white-color)`}}>Our Values</h2>
@@ -298,7 +263,7 @@ const About = ({img}) => {
               </p>
             </div>
 
-            <div style={{borderBottom: `2px solid var(--main-color)`, padding: `4rem 4rem`}} className="mission">
+            <div style={{borderBottom: `2px solid var(--main-color)`, padding: `4rem 0 4rem 0`}} className="mission">
               <div style={{position: `relative`}}>
                 <Img fluid={data.mission.edges[0].node.fluid} className="main-logo" alt="mission" style={{width: `100%`, borderRadius: `2.5rem`, height: `300px`, marginTop: `2rem`, marginBottom: `4rem`}}/>
                 <h2 style={{position: `absolute`, top: `100px`, right: `50px`, fontSize: `6rem`, color: `var(--white-color)`, marginBottom: `4rem`}}>Our Mission</h2>

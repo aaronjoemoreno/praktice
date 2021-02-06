@@ -13,7 +13,7 @@ import './praktices.css'
 const Container = styled.div`
     text-align: center;
     margin: 0 auto;
-    width: 80%;
+    width: 100%;
 
     .details{
         width: 80%;
@@ -21,6 +21,8 @@ const Container = styled.div`
     }
 
     .my-masonry-grid{
+        width: 80%;
+        margin: 0 auto;
         background: white;
     }
     .praktice{
@@ -42,6 +44,11 @@ const Container = styled.div`
     }
 `
 
+const ApplicationContainer = styled.div`
+    width: 80%;
+    margin: 0 auto;
+`
+
 const Praktices = ({data}) => {
     const breakpointColumnsObj = {
         default: 2,
@@ -49,15 +56,16 @@ const Praktices = ({data}) => {
         700: 2,
         500: 1
       };
+
     const praktices = data.praktices.nodes;
 
     return (
         <Container>
             <Header />
+            <Logo />
             <h2>Hello Practitioners. Welcome.
             <br></br>
             Meet Your New Home. </h2>
-            <Logo />
             <div className="details" style={{maxWidth: "60%", paddingBottom: '5rem'}}>
                 <h3>If you do not see your Praktice <Link to="/contact">Contact Us!</Link></h3>
                 <h3>PRAKTICE is designated to serve practitioners for Solo session or with one or two Customers Virtual Instruction: Live or, prerecorded - Photoshoots - Consultations</h3>
@@ -80,12 +88,14 @@ const Praktices = ({data}) => {
                     )
                 })}
             </Masonry>
-            <div className="button">
+            <div className="button" id="application" style={{paddingTop: `2rem`, paddingBottom: `2rem`}}>
                 <Link to="/contact">
                     <Button text="Contact Us"/>
                 </Link>
             </div>
-            <ApplicationProcess />
+            <ApplicationContainer>
+                <ApplicationProcess />
+            </ApplicationContainer>
             <Footer />
         </Container>
     )

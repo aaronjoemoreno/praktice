@@ -52,6 +52,7 @@ const Container = styled.div`
 
   @media (max-width: 768px) {
     position: relative;
+    padding-top: 2rem;
 
     nav{
       display: none;
@@ -61,6 +62,8 @@ const Container = styled.div`
       display: block;
       position: relative;
       height: 4rem;
+      width: 50px;
+      float: right;
     }
 
     .hamburger{

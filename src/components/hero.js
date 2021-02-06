@@ -71,10 +71,6 @@ const Container = styled.div`
         width: 70%;
       }
 
-      .main-logo{
-        width: 70%;
-      }
-
       .details{
         grid-template-columns: repeat(2, 1fr);
       }
@@ -91,7 +87,13 @@ const Container = styled.div`
 
     @media (max-width: 410px) {
       .details{
-        grid-template-columns: 1fr;
+        width: 80%;
+        grid-template-columns: 1fr 1fr;
+
+        h3{
+          width: 10rem;
+          font-size: 1.4rem;
+        }
       }
     }
 `
