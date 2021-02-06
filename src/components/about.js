@@ -120,7 +120,7 @@ const CovidContainer = styled.div`
   margin-top: 2rem;
   border-top: 2px solid var(--main-color);
   border-bottom: 2px solid var(--main-color);
-  padding: 4rem 0 1rem 0;
+  padding: 4rem 0 4rem 0;
 
   .images{
     display: grid;
@@ -128,6 +128,8 @@ const CovidContainer = styled.div`
   }
 
   @media (max-width: 1260px) {
+    padding: 4rem 0 1rem 0;
+
     .images{
       grid-template-columns: 1fr;
     }
