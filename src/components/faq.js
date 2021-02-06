@@ -100,7 +100,7 @@ const Faq = () => {
                 <p className="answer">60 minute time slots consist of 45 minutes for training plus 15 minutes for clothing change before and after your PRAKTICE. As a precaution, a 10-minute interval will be added between each time slot. During that time the studio must be vacated to allow for ventilation, cleaning and sanitization by our staff.</p>
 
                 <p className="question">How can I book Pra<span style={{color: `var(--secondary-color)`}}>K</span>tice?</p>
-                <p className="answer">Please see our <Link to="/praktices#application">booking process</Link> info.</p>
+                <p className="answer">Please see our <Link to="/praktices">booking process</Link> info.</p>
 
                 <p className="question">Are there any fees or deposits required?</p>
                 <p className="answer">A one time processing fee of $35 is taken upon your first booking. A refundable deposit of $300 will be required to cover any damage or equipment missing and/or over booking times.</p>

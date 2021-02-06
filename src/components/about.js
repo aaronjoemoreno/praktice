@@ -11,17 +11,20 @@ const Container = styled.div`
     border-top: 1px solid black;
     text-align: center;
     padding-top: 2rem;
-
     p{
       margin: 0 auto;
       font-size: 2rem;
       width: 80%;
     }
 
-    q{
-      font-size: 2rem;
-      font-style: italic;
-      border-left: 2px solid var(--secondary-color);
+    .quote{
+      padding: 2rem 0 2rem 0;
+
+      q{
+        font-size: 2rem;
+        font-style: italic;
+        border-left: 2px solid var(--secondary-color);
+      }
     }
 
     h3{
@@ -45,10 +48,12 @@ const Container = styled.div`
       border-radius: 2.5rem;
     }
 
+    .quote{
+      border-top: 1px solid var(--main-color)
+    }
+
     @media (max-width: 1080px) {
-      .quote{
-        padding: 5rem;
-      }
+
     }
 
     @media (max-width: 768px) {
@@ -79,47 +84,25 @@ const Container = styled.div`
           font-size: 5rem !important;
         }
       }
-
-      .quote{
-        p{
-          padding: 2rem;
-        }
-
-        img{
-          padding-top: 2rem;
-          padding-bottom: 2rem;
-        }
-      }
     }
 
 
     @media (max-width: 470px) {
-      .quote{
-        padding-bottom: 10rem;
-      }
+
     }
 
 
     @media (max-width: 410px) {
-      .quote{
-        width: 100%;
-        padding: 0;
-
-        p{
-          margin: 0 auto;
-          text-align: center;
-          padding-bottom: 5rem;
-        }
-      }
     }
 `
 
 const CovidContainer = styled.div`
+  display: block;
   width: 100%;
   margin: 0 auto;
   margin-top: 2rem;
-  border-top: 2px solid var(--main-color);
-  border-bottom: 2px solid var(--main-color);
+  border-top: 1px solid var(--main-color);
+  border-bottom: 1px solid var(--main-color);
   padding: 4rem 0 4rem 0;
 
   .images{
@@ -233,13 +216,13 @@ const About = ({img}) => {
 
             {!img &&
 
-            <div className="quote" style={{paddingTop: `4rem`}}>
-              <q style={{fontSize: `2.5rem`}}>Practice makes perfect. 
+            <div className="quote">
+              <q>Practice makes perfect. 
               After a long time of practicing, our work will become natural, skillful, swift, and steady.
               </q>
+              <br></br>
               <p>Bruce Lee</p>
-
-              <Img fluid={data.about.edges[0].node.fluid} className="quote-img" alt="praktice logo" style={{margin: `0 auto`, marginTop: `-100px`,marginBottom: `-100px`, zIndex: `-100`}}/>
+              <Img fluid={data.about.edges[0].node.fluid} className="quote-img" alt="praktice logo" />
             </div>
 
             }
