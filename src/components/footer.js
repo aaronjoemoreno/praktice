@@ -148,7 +148,7 @@ const Footer = () => {
                 <h4>{new Date().getFullYear()}</h4>
                 <h4>Praktice LLC</h4>
                 <h4>117 Dobbin street Brooklyn New York 11222</h4>
-                <h4>Tel: 646-399-1477</h4>
+                <h4>Tel: 917-945-1287</h4>
             </LocationContainer>
         </Container>
     )

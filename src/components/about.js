@@ -25,6 +25,12 @@ const Container = styled.div`
         font-style: italic;
         border-left: 2px solid var(--secondary-color);
       }
+
+      .quote-img{
+        margin: 0 auto;
+        border-radius: 2.5rem;
+        width: 70%;
+      }
     }
 
     h3{
