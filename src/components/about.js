@@ -11,6 +11,7 @@ const Container = styled.div`
     border-top: 1px solid black;
     text-align: center;
     padding-top: 2rem;
+
     p{
       margin: 0 auto;
       font-size: 2rem;
@@ -85,16 +86,20 @@ const Container = styled.div`
         h2{
           padding: 0 !important;
           margin: 0;
-          top: 150px !important;
-          right: 10px !important;
-          font-size: 5rem !important;
+          top: 160px !important;
+          right: 5px !important;
+          font-size: 4.5rem !important;
         }
       }
     }
 
 
     @media (max-width: 470px) {
-
+      .mission{
+        h2{
+          top: 210px !important;
+        }
+      }
     }
 
 
@@ -226,6 +231,7 @@ const About = ({img}) => {
               <q>Practice makes perfect. 
               After a long time of practicing, our work will become natural, skillful, swift, and steady.
               </q>
+              <br></br>
               <br></br>
               <p>Bruce Lee</p>
               <Img fluid={data.about.edges[0].node.fluid} className="quote-img" alt="praktice logo" />

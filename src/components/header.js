@@ -68,11 +68,14 @@ const Container = styled.div`
 
     .hamburger{
       position: absolute;
-      right: 2rem;
+      right: 0;
+      left: 0;
+      top: -20px;
     }
 
     .mobile-nav-itmes{
       display: grid;
+      width: 100%;
       justify-content: center;
       margin-bottom: 10rem;
     }
