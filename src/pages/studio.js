@@ -1,11 +1,10 @@
 import React from 'react'
 import Header from '../components/header'
 import Logo from '../components/logo'
-import { Link } from 'gatsby'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
 import Masonry from 'react-masonry-css'
-import Button from '../components/button'
+import { Contact } from '../components/contact'
 import Footer from '../components/footer'
 import './praktices.css'
 
@@ -68,7 +67,7 @@ const Studio = ({data}) => {
                 >
                 {praktices.map((praktice, index) => {
                     return(
-                        <div className="praktice" key={index} style={{position: 'relative', boxShadow: `0px 3px 15px rgba(0,0,0,0.4)`, paddingBottom: `.3rem`, borderRadius: `2rem`}}>
+                        <div className="praktice" key={index} style={{position: 'relative', boxShadow: `0px 3px 15px rgba(0,0,0,0.4)`, paddingBottom: `1rem`, borderRadius: `2rem`}}>
                             <a href={praktice.image.asset.fixed.src} target="-blank">
                                 <Img fluid={praktice.image.asset.fluid} style={{height: Math.random() * (500 - 200) + 200, borderRadius: `1rem`}} />
                             </a>
@@ -76,10 +75,8 @@ const Studio = ({data}) => {
                     )
                 })}
             </Masonry>
-            <div className="button" id="application" style={{paddingTop: `2rem`, paddingBottom: `2rem`}}>
-                <Link to="/contact">
-                    <Button text="Contact Us"/>
-                </Link>
+            <div style={{paddingTop: `2rem`}}>
+                <Contact />
             </div>
             <Footer />
         </Container>

@@ -75,11 +75,10 @@ const Studio = () => {
                 breakpointCols={breakpointColumnsObj}
                 className="my-masonry-grid"
                 columnClassName="my-masonry-grid_column"
-                // style={{background: 'black'}}
                 >
                 {praktices.map((praktice, index) => {
                     return(
-                        <div className="praktice" key={index} style={{position: 'relative', boxShadow: `0px 3px 15px rgba(0,0,0,0.4)`, paddingBottom: `.3rem`, borderRadius: `2rem`}}>
+                        <div className="praktice" key={index} style={{position: 'relative', boxShadow: `0px 3px 15px rgba(0,0,0,0.4)`, paddingBottom: `1rem`, borderRadius: `2rem`}}>
                             <Link to="/studio">
                                 <Img fluid={praktice.image.asset.fluid} style={{height: 400, borderRadius: `1rem`}} />
                             </Link>
@@ -87,6 +86,9 @@ const Studio = () => {
                     )
                 })}
             </Masonry>
+            <Link to="/studio">
+               <h3>See More Of The Studio...</h3>
+            </Link>
         </Container>
     )
 }
