@@ -148,7 +148,7 @@ return (
                         <input type="email" name="email" placeholder="Email"/>
                         <input type="phone" name="email" placeholder="Phone"/>
                         <textarea name="message" placeholder="message"></textarea>
-                        <input type="submit" className="submit" placeholder="Submit" />
+                        <input type="submit" className="submit" placeholder="Send" />
                     </form>
                 </Email>
             }
