@@ -75,7 +75,7 @@ const Email = styled.div`
         background: #F5E9E9;
     }
 
-    button{
+    .submit{
         display: block;
         margin: 0 auto;
         font-size: 2rem;
@@ -115,7 +115,7 @@ const Call = styled.div`
     @media (max-width: 768px) {
         width: 100%;
 
-        button{
+        .submit{
             background: purple;
         }
     }
@@ -148,7 +148,7 @@ return (
                         <input type="email" name="email" placeholder="Email"/>
                         <input type="phone" name="email" placeholder="Phone"/>
                         <textarea name="message" placeholder="message"></textarea>
-                        <button type="submit">Send</button>
+                        <input type="submit" className="submit" placeholder="Submit" />
                     </form>
                 </Email>
             }
