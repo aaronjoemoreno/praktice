@@ -5,9 +5,7 @@ import { Link } from 'gatsby'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
 import Masonry from 'react-masonry-css'
-import ApplicationProcess from '../components/applicationProcess'
 import Button from '../components/button'
-import Studio from '../components/studio'
 import Footer from '../components/footer'
 import './praktices.css'
 
@@ -45,12 +43,7 @@ const Container = styled.div`
     }
 `
 
-const ApplicationContainer = styled.div`
-    width: 80%;
-    margin: 0 auto;
-`
-
-const Praktices = ({data}) => {
+const Studio = ({data}) => {
     const breakpointColumnsObj = {
         default: 2,
         1100: 2,
@@ -58,7 +51,7 @@ const Praktices = ({data}) => {
         500: 1
       };
 
-    const praktices = data.praktices.nodes;
+    const praktices = data.studio.nodes;
 
     return (
         <Container>
@@ -67,11 +60,6 @@ const Praktices = ({data}) => {
             <h2>Hello Practitioners. Welcome.
             <br></br>
             Meet Your New Home. </h2>
-            <div className="details" style={{maxWidth: "60%", paddingBottom: '5rem'}}>
-                <h3>If you do not see your Praktice <Link to="/contact">Contact Us!</Link></h3>
-                <h3>PRAKTICE is designated to serve practitioners for Solo session or with one or two Customers Virtual Instruction: Live or, prerecorded - Photoshoots - Consultations</h3>
-            </div>
-
             <Masonry
                 breakpointCols={breakpointColumnsObj}
                 className="my-masonry-grid"
@@ -81,10 +69,9 @@ const Praktices = ({data}) => {
                 {praktices.map((praktice, index) => {
                     return(
                         <div className="praktice" key={index} style={{position: 'relative', boxShadow: `0px 3px 15px rgba(0,0,0,0.4)`, paddingBottom: `.3rem`, borderRadius: `2rem`}}>
-                            <Link to="/contact">
+                            <a href={praktice.image.asset.fixed.src} target="-blank">
                                 <Img fluid={praktice.image.asset.fluid} style={{height: Math.random() * (500 - 200) + 200, borderRadius: `1rem`}} />
-                                <h3 style={{color: `var(--main-color)`}}>{praktice.title}</h3>
-                            </Link>
+                            </a>
                         </div>
                     )
                 })}
@@ -94,20 +81,16 @@ const Praktices = ({data}) => {
                     <Button text="Contact Us"/>
                 </Link>
             </div>
-            <ApplicationContainer>
-                <ApplicationProcess />
-            </ApplicationContainer>
-            <Studio />
             <Footer />
         </Container>
     )
 }
 
-export default Praktices
+export default Studio
 
 export const query = graphql`
-query data {
-    praktices: allSanityPraktices {
+query {
+    studio: allSanityStudio {
       nodes{
         title
         details {
@@ -117,6 +100,9 @@ query data {
             asset{
                 fluid(maxWidth: 400){
                     ...GatsbySanityImageFluid
+                }
+                fixed(width: 1000) {
+                    src
                 }
             }
         }
