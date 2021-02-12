@@ -151,7 +151,8 @@ return (
                         {/* <input type="hidden" name="bot-field" />
                         <input type="hidden" name="form-name" value="contact" /> */}
                         <input type="text" name="name" placeholder="Full Name"/>
-                        <input type="email" name="email" placeholder="Email"/>
+                        <input type="email" className="Email" placeholder="Email" name="email"required
+                        />
                         <input type="phone" name="phone" placeholder="Phone"/>
                         <textarea name="message" placeholder="message"></textarea>
                         <input type="submit" className="submit" placeholder="Send" />
