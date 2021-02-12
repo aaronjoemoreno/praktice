@@ -11,7 +11,9 @@ const Layout = ({ children }) => {
       <Helmet>
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="Praktice NYC" />
-        <meta name="twitter:creator" content="@nickbilton" />
+        <meta name="twitter:creator" content="@prakticel" />
+        <meta name="twitter:image" content="https://www.praktice.nyc/static/e73c4d0ebffcf57efeddd8c3a7781170/0e329/praktice.jpg" />
+        <meta name="twitter:description" content="An exclusve versatile wellness studio serving practitioners and their clients at a reasonable cost." />
         <meta property="og:url" content="https://www.praktice.nyc/static/e73c4d0ebffcf57efeddd8c3a7781170/0e329/praktice.jpg" />
         <meta property="og:title" content="Praktice NYC" />
         <meta property="og:description" content="An exclusve versatile wellness studio serving practitioners and their clients at a reasonable cost." />
