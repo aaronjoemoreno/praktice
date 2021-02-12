@@ -141,22 +141,16 @@ return (
             {tab === 'email' &&
                 <Email>
                     <h2>Send Us a Message:</h2>
-                    <form
-                        className="main-form"
-                        name="contact"
-                        method="POST"
-                        data-netlify="true"
-                        data-netlify-recaptcha="true"
-                    >
-                        {/* <input type="hidden" name="bot-field" />
-                        <input type="hidden" name="form-name" value="contact" /> */}
+                        <form method="post" netlify-honeypot="bot-field" data-netlify="true" name="contact">
+                        <input type="hidden" name="bot-field" />
+                        <input type="hidden" name="form-name" value="contact" />
                         <input type="text" name="name" placeholder="Full Name"/>
-                        <input type="email" className="Email" placeholder="Email" name="email"required
+                        <input type="email" className="Email" placeholder="Email" name="email" required
                         />
                         <input type="phone" name="phone" placeholder="Phone"/>
                         <textarea name="message" placeholder="message"></textarea>
                         <input type="submit" className="submit" placeholder="Send" />
-                    </form>
+                        </form>
                 </Email>
             }
 
