@@ -132,7 +132,7 @@ const Hero = () => {
     return (
         <Container>
             <Logo />
-            <h2>An exclusve versatile wellness studio serving practitioners <br/>
+            <h2>An exclusive versatile wellness studio serving practitioners <br/>
     and their clients at a reasonable cost.</h2>
             <div className="details">
               {data.site.siteMetadata.details.map(item => {
