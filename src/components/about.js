@@ -244,7 +244,7 @@ const About = ({img}) => {
               <div className="images">
                 <Img fluid={data.sanitize.edges[0].node.fluid} className="main-logo" alt="sanitize" style={{margin: `0 auto`, borderRadius: `2.5rem`, marginTop: `4rem`, marginBottom: `4rem`}}/>
 
-                <p>PRAKTICE offers the privacy and seclusion that cannot be found at most wellness centers. We are committed to keep an exclusive and germ free zone to maximize the safety of our practitioners and their clients. PRAKTICE is equipped with a Molekule Pro air purifier.  We allow ten minute intervals between sessions for cleaning, further ventilation and sanitization.  In addition, each practitioner is required to wipe down all equipment before and after use and wearing masks during sessions.
+                <p>PRAKTICE offers the privacy and seclusion that cannot be found at most wellness centers. We are committed to keep an exclusive and germ free zone to maximize the safety of our practitioners and their clients. PRAKTICE is equipped with a Molekule Pro air purifier.  We allow ten minute intervals between sessions for cleaning, further ventilation and sanitization.  In addition, each practitioner is required to wipe down all equipment before and after use.
                 </p>
 
                 <Img fluid={data.molekule.edges[0].node.fluid} className="main-logo" alt="molekule" style={{margin: `0 auto`, borderRadius: `2.5rem`, marginTop: `4rem`, marginBottom: `4rem`, width: `30%`}}/>

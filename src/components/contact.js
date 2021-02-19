@@ -148,7 +148,7 @@ return (
                         <input type="email" className="Email" placeholder="Email" name="email" required
                         />
                         <input type="phone" name="phone" placeholder="Phone"/>
-                        <textarea name="message" placeholder="message"></textarea>
+                        <textarea name="message" placeholder="Message"></textarea>
                         <input type="submit" className="submit" placeholder="Send" />
                         </form>
                 </Email>

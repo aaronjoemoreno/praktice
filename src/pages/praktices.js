@@ -69,7 +69,7 @@ const Praktices = ({data}) => {
             Meet Your New Home. </h2>
             <div className="details" style={{maxWidth: "60%", paddingBottom: '5rem'}}>
                 <h3>If you do not see your Praktice <Link to="/contact">Contact Us!</Link></h3>
-                <h3>PRAKTICE is designated to serve practitioners for Solo session or with one or two Customers Virtual Instruction: Live or, prerecorded - Photoshoots - Consultations</h3>
+                <h3>PRAKTICE is designed to serve practitioners for One on One sessions, Virtual Classes, Photoshoots, Consultations, Education and Webinars</h3>
             </div>
 
             <Masonry

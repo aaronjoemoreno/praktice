@@ -70,8 +70,8 @@ const ApplicationProcess = () => {
                     <li>2.	Following your tour, you will receive a one-time code to open your profile on our members and booking platform.</li>
                     <li>3.  In our booking platform you can upload your professional certification or license and a certificate of insurance for review.</li>
                     <li>4.	Review and sign our agreement and waiver forms.</li>
-                    <li>5.  We will request that you add PRAKTICE LLC as the additional Insured to your COI.</li>
-                    <li>6.  Congrat! You can now book PRAKTICE</li>
+                    <li>5.  We will request that you add PRAKTICE LLC as an additional Insured to your COI.</li>
+                    <li>6.  Congrats! You can now book PRAKTICE</li>
                 </ul>
 
                 <Pricing />
