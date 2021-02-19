@@ -59,7 +59,6 @@ const Studio = () => {
     }
 `)
 
-
     const breakpointColumnsObj = {
         default: 2,
         1100: 2,
