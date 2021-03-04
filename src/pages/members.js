@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react'
+import { navigate } from "gatsby"
 import styled from 'styled-components'
 import Header from '../components/header'
 import Logo from '../components/logo'
 import Scheduler from '../components/scheduler'
+import { handleLogin, isLoggedIn } from "../services/auth"
 // import Firebase from '../components/Firebase/firebase'
 // import FirebaseState from '../components/Firebase/FirebaseState'
 // import { navigate } from 'gatsby'
@@ -150,6 +152,7 @@ const Members = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        handleLogin({username: email, password })
 
         // Firebase.auth().signInWithEmailAndPassword(email, password)
         // .then(res => {
@@ -165,6 +168,12 @@ const Members = () => {
         //     },4000)
         // });
     }
+
+    useEffect(() => {
+        if (isLoggedIn()) {
+            navigate(`/dashboard`)
+        }
+    }, [])
 
     return (
         <>
