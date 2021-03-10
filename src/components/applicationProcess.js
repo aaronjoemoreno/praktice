@@ -74,11 +74,11 @@ const ApplicationProcess = () => {
                     <li>6.  Congrats! You can now book PRAKTICE</li>
                 </ul>
 
-                <Pricing />
+                <Pricing id="rates" />
 
                 <Button text="Contact Us" clickedButton={() => navigate('/contact')}/>
 
-                <Cancellation />
+                <Cancellation id="cancellation" />
 
                 <Img fluid={data.yoga.edges[0].node.fluid}     className="yoga" alt="yoga"/>
             </Container>

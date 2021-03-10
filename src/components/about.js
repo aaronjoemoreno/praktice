@@ -284,7 +284,7 @@ const About = ({img}) => {
               <div className="images">
                 <Img fluid={data.sanitize.edges[0].node.fluid} className="main-logo" alt="sanitize" style={{margin: `0 auto`, borderRadius: `2.5rem`, marginTop: `4rem`, marginBottom: `4rem`}}/>
 
-                <p>{covid}</p>
+                <p id="covid">{covid}</p>
 
                 <Img fluid={data.molekule.edges[0].node.fluid} className="main-logo" alt="molekule" style={{margin: `0 auto`, borderRadius: `2.5rem`, marginTop: `4rem`, marginBottom: `4rem`, width: `30%`}}/>
               </div>
@@ -295,7 +295,7 @@ const About = ({img}) => {
                 <Img fluid={data.why.edges[0].node.fluid} className="main-logo" alt="mission" style={{width: `100%`, borderRadius: `2.5rem`, height: `300px`, marginTop: `2rem`, marginBottom: `4rem`}}/>
                 <h2 style={{position: `absolute`, top: `0px`, right: `50px`, fontSize: `6rem`, color: `var(--white-color)`}}>Our Values</h2>
               </div>
-              <p>{values}</p>
+              <p id="values">{values}</p>
             </div>
 
             <div style={{borderBottom: `2px solid var(--main-color)`, padding: `4rem 0 4rem 0`}} className="mission">
@@ -303,7 +303,7 @@ const About = ({img}) => {
                 <Img fluid={data.mission.edges[0].node.fluid} className="main-logo" alt="mission" style={{width: `100%`, borderRadius: `2.5rem`, height: `300px`, marginTop: `2rem`, marginBottom: `4rem`}}/>
                 <h2 style={{position: `absolute`, top: `100px`, right: `50px`, fontSize: `6rem`, color: `var(--white-color)`, marginBottom: `4rem`}}>Our Mission</h2>
               </div>
-              <p>{mission}</p>
+              <p id="mission">{mission}</p>
             </div>
         </Container>
     )

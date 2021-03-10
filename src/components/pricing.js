@@ -66,7 +66,7 @@ const Pricing = () => {
                         <h3 style={{fontSize: `3rem`}}>Peak</h3>
                         <div>
                             <p>6:00 am - 10:30 am</p>
-                            <p>4:30 pm - 10:10 pm</p>
+                            <p>4:30 pm - 10:30 pm</p>
                         </div>
                         <div className="header">
                             <h2>Weekly</h2>

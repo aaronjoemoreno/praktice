@@ -106,19 +106,19 @@ const Header = () => {
       </Link>
 
       <Link to="/about">
-        {/* <h4 onMouseOver={() => setDisplay(true)} onClick={() => display ? setDisplay(false): setDisplay(true)}>ABOUT</h4> */}
-        <h4>ABOUT</h4>
+        <h4 onMouseOver={() => setDisplay(true)} onClick={() => display ? setDisplay(false): setDisplay(true)}>ABOUT</h4>
+        {/* <h4>ABOUT</h4> */}
         {display &&
         <div className="dropdown">
           <ul>
             <li>
-              <a href="#covid">Covid 19</a>
+              <Link to="/#covid">Covid 19</Link>
             </li>
             <li>
-              <a href="#covid">Our Values</a>
+              <Link to="/#values">Our Values</Link>
             </li>
             <li>
-              <a href="#covid">Our Mission</a>
+              <Link to="/#mission">Our Mission</Link>
             </li>
           </ul>
         </div>
@@ -126,7 +126,26 @@ const Header = () => {
       </Link>
 
       <Link to="/praktices">
-        <h4>PRA<span style={{color: `var(--secondary-color)`}}>K</span>TICES</h4>
+      <h4 onMouseOver={() => setDisplay(true)} onClick={() => display ? setDisplay(false): setDisplay(true)}>PRA<span style={{color: `var(--secondary-color)`}}>K</span>TICES</h4>
+      {/* <h4>PRA<span style={{color: `var(--secondary-color)`}}>K</span>TICES</h4> */}
+        {display &&
+        <div className="dropdown">
+          <ul>
+            <li>
+              <Link to="/#application">Application Process</Link>
+            </li>
+            <li>
+              <Link to="/#rates">Rates and Prices</Link>
+            </li>
+            <li>
+              <Link to="/#cancellation">Cancellation Policy</Link>
+            </li>
+            <li>
+              <Link to="/#gallery">Gallery</Link>
+            </li>
+          </ul>
+        </div>
+      }
       </Link>
 
       <Link to="/contact">
