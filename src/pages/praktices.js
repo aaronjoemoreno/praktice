@@ -95,9 +95,9 @@ const Praktices = ({data}) => {
                 </Link>
             </div>
             <ApplicationContainer>
-                <ApplicationProcess id="application" />
+                <ApplicationProcess />
             </ApplicationContainer>
-            <Studio id="gallery" />
+            <Studio />
             <Footer />
         </Container>
     )

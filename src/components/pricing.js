@@ -58,7 +58,7 @@ const Container = styled.div`
 
 const Pricing = () => {
     return (
-        <Container>
+        <Container id="rates">
             <h2>Rates</h2>
             <div className="prices">
                 <div className="card">

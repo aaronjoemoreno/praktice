@@ -88,7 +88,7 @@ const LocationContainer = styled.div`
 const Footer = () => {
     const data = useStaticQuery(graphql`
     query{
-      twitter: allImageSharp(filter: {fluid: {originalName: {eq: "twitter.png"}}}) {
+      facebook: allImageSharp(filter: {fluid: {originalName: {eq: "facebook.png"}}}) {
         edges {
           node {
             fluid {
@@ -125,8 +125,8 @@ const Footer = () => {
                 </div>
                 <div className="center">
                 <div className="social-img">
-                    <a href="https://twitter.com/prakticel" target="_blank">
-                        <Img fluid={data.twitter.edges[0].node.fluid} alt="twitter"/>
+                    <a href="https://www.facebook.com/Praktice.nyc/" target="_blank">
+                        <Img fluid={data.facebook.edges[0].node.fluid} alt="facebook"/>
                     </a>
                 </div>
                 <div className="social-img">

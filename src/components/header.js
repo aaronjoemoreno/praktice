@@ -112,13 +112,13 @@ const Header = () => {
         <div className="dropdown">
           <ul>
             <li>
-              <Link to="/#covid">Covid 19</Link>
+              <Link to="/about/#covid">Covid 19</Link>
             </li>
             <li>
-              <Link to="/#values">Our Values</Link>
+              <Link to="/about/#values">Our Values</Link>
             </li>
             <li>
-              <Link to="/#mission">Our Mission</Link>
+              <Link to="/about/#mission">Our Mission</Link>
             </li>
           </ul>
         </div>
@@ -132,16 +132,16 @@ const Header = () => {
         <div className="dropdown">
           <ul>
             <li>
-              <Link to="/#application">Application Process</Link>
+              <Link to="/praktices/#application">Application Process</Link>
             </li>
             <li>
-              <Link to="/#rates">Rates and Prices</Link>
+              <Link to="/praktices/#rates">Rates and Prices</Link>
             </li>
             <li>
-              <Link to="/#cancellation">Cancellation Policy</Link>
+              <Link to="/praktices/#cancellation">Cancellation Policy</Link>
             </li>
             <li>
-              <Link to="/#gallery">Gallery</Link>
+              <Link to="/praktices/#gallery">Gallery</Link>
             </li>
           </ul>
         </div>

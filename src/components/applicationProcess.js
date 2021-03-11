@@ -62,7 +62,7 @@ const ApplicationProcess = () => {
 
 
     return (
-        <Container>
+        <Container id="application">
                 <Img fluid={data.schedule.edges[0].node.fluid}     className="header-img-profile" alt="schedule"/>
                 <h2>Application Process</h2>
                 <ul>
@@ -74,11 +74,11 @@ const ApplicationProcess = () => {
                     <li>6.  Congrats! You can now book PRAKTICE</li>
                 </ul>
 
-                <Pricing id="rates" />
+                <Pricing />
 
                 <Button text="Contact Us" clickedButton={() => navigate('/contact')}/>
 
-                <Cancellation id="cancellation" />
+                <Cancellation />
 
                 <Img fluid={data.yoga.edges[0].node.fluid}     className="yoga" alt="yoga"/>
             </Container>
