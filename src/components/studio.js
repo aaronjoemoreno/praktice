@@ -69,7 +69,7 @@ const Studio = () => {
     const praktices = data.studio.nodes;
 
     return (
-        <Container>
+        <Container id="gallery">
             <Masonry
                 breakpointCols={breakpointColumnsObj}
                 className="my-masonry-grid"

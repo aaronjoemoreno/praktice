@@ -62,7 +62,7 @@ const ApplicationProcess = () => {
 
 
     return (
-        <Container>
+        <Container id="application">
                 <Img fluid={data.schedule.edges[0].node.fluid}     className="header-img-profile" alt="schedule"/>
                 <h2>Application Process</h2>
                 <ul>

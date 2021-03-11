@@ -48,7 +48,7 @@ const Container = styled.div`
 
 const Cancellation = () => {
     return (
-        <Container>
+        <Container id="cancellation">
             <h2>Cancellation & Refund  Policy </h2>
             <div>
                 <div className="card">
