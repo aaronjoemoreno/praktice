@@ -69,3 +69,8 @@ yarn-error.log
 .yarn-integrity
 
 ./src/components/Firebase
+./src/components/phone.js
+./src/components/login-template.js
+./src/components/privateRoute.js
+./src/pages/admin
+./src/pages/page-2.js
