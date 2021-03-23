@@ -169,11 +169,11 @@ const Members = () => {
         // });
     }
 
-    useEffect(() => {
-        if (isLoggedIn()) {
-            navigate(`/dashboard`)
-        }
-    }, [])
+    // useEffect(() => {
+    //     if (isLoggedIn()) {
+    //         navigate(`/dashboard`)
+    //     }
+    // }, [])
 
     return (
         <>
