@@ -2,7 +2,8 @@ module.exports = {
   siteMetadata: {
     title: `Praktice`,
     author: `@aaronjoemoreno`,
-    details: ['One On One', 'Virtual Classes', 'Photoshoots', 'Education', 'Consultations', 'Webinars']
+    details: ['One On One', 'Virtual Classes', 'Photoshoots', 'Education', 'Consultations', 'Webinars'],
+    description: 'An exclusive versatile wellness studio serving practitioners and their clients at a reasonable cost.'
   },
   plugins: [
     `gatsby-plugin-styled-components`,
